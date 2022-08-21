@@ -26,11 +26,11 @@ const Repositories = () => {
 
   useEffect(() => {
     (async () => {
-      var data = await fetch("https://api.github.com/users/huebyte/repos").then(
+      var data = await fetch("https://api.github.com/users/bforbiggy/repos").then(
         (response) => response.json()
       );
 
-      var user = await fetch("https://api.github.com/users/huebyte").then(
+      var user = await fetch("https://api.github.com/users/bforbiggy").then(
         (response) => response.json()
       );
 
@@ -69,7 +69,7 @@ const Repositories = () => {
               {user ? (
                 <>
                   <div className="avatar">
-                    <img src="https://github.com/huebyte.png" alt="huebyte" />
+                    <img src="https://github.com/bforbiggy.png" alt="Biggy's pfp" />
                   </div>
                   <div className="user-info">
                     <div className="name">🍧 {user.login} 🍧</div>
@@ -95,7 +95,7 @@ const Repositories = () => {
               )}
             </div>
             <div className="repositories">
-              <div className="title">HueByte@Repositories:~ $</div>
+              <div className="title">bforbiggy@Repositories:~ $</div>
               {repos.length > 0 ? (
                 repos?.map((data) => (
                   <a

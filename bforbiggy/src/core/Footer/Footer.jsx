@@ -10,7 +10,7 @@ const Footer = () => {
         style={{ backgroundImage: `url(${layer4}` }}
       ></div>
       <div className="content">
-        © Copyright {new Date().getFullYear()} by HueByte
+        © Copyright {new Date().getFullYear()} by biggy
       </div>
     </div>
   );

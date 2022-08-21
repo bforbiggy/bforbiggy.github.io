@@ -28,7 +28,7 @@ const Menu = () => {
               Home
             </NavLink>
             <a
-              href="https://github.com/HueByte"
+              href="https://github.com/bforbiggy"
               target="_blank"
               className="item"
               onClick={ToggleMenu}
