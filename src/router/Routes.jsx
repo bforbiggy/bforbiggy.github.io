@@ -3,15 +3,9 @@ import { Route, Routes, Navigate, Outlet } from "react-router-dom";
 import Menu from "../core/menu/Menu";
 import HomePage from "../pages/homepage/Homepage";
 
-const Repositories = React.lazy(() =>
-  import("../pages/repositories/Repositories")
-);
-const MyThingsSaver = React.lazy(() =>
-  import("../pages/projects/MyThingsSaver/MyThingsSaver")
-);
-const ProjectLayout = React.lazy(() =>
-  import("../core/ProjectLayout/ProjectLayout")
-);
+const Repositories = React.lazy(() => import("../pages/repositories/Repositories"));
+const MyThingsSaver = React.lazy(() => import("../pages/projects/MyThingsSaver/MyThingsSaver"));
+const ProjectLayout = React.lazy(() => import("../core/ProjectLayout/ProjectLayout"));
 
 const ClientRoutes = () => {
   return (

@@ -26,18 +26,18 @@ const Repositories = () => {
 
   useEffect(() => {
     (async () => {
-      var data = await fetch("https://api.github.com/users/bforbiggy/repos").then(
+      let data = await fetch("https://api.github.com/users/bforbiggy/repos").then(
         (response) => response.json()
       );
 
-      var user = await fetch("https://api.github.com/users/bforbiggy").then(
+      let user = await fetch("https://api.github.com/users/bforbiggy").then(
         (response) => response.json()
       );
 
       setRepos(
         data
           .filter((item) => {
-            return item.fork == false;
+            return !item.fork;
           })
           .sort((a, b) => {
             return b.stargazers_count - a.stargazers_count;
@@ -66,7 +66,7 @@ const Repositories = () => {
         ) : (
           <>
             <div className="user">
-              {user ? (
+              {user && (
                 <>
                   <div className="avatar">
                     <img src="https://github.com/bforbiggy.png" alt="Biggy's pfp" />
@@ -90,8 +90,6 @@ const Repositories = () => {
                     </div>
                   </div>
                 </>
-              ) : (
-                <></>
               )}
             </div>
             <div className="repositories">
