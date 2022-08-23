@@ -1,17 +1,17 @@
 import { BrowserRouter } from "react-router-dom";
-import { createBrowserHistory } from "history";
 import ClientRoutes from "./router/Routes";
-import { Suspense, useEffect } from "react";
+import { createBrowserHistory } from "history";
+import { Suspense, useEffect, useState } from "react";
 import Loader from "./core/loader/Loader";
+
 import "./App.scss";
-import { useState } from "react";
+
 function App() {
   const history = createBrowserHistory();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const preloadedImages = ["https://github.com/bforbiggy.png"];
-
     cacheImages(preloadedImages);
   }, []);
 
@@ -29,6 +29,7 @@ function App() {
     await Promise.all(promises);
     setIsLoading(false);
   };
+
   return (
     <BrowserRouter history={history}>
       <Suspense fallback={<Loader />}>

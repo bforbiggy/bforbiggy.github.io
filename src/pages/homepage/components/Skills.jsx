@@ -1,9 +1,7 @@
-import React from "react";
-import { useRef } from "react";
-import { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { AiFillFire } from "react-icons/ai";
 
-const Skills = ({}) => {
+const Skills = () => {
   const skills = useRef();
   let element = useRef();
   const langs = [
@@ -15,14 +13,8 @@ const Skills = ({}) => {
     { name: "JavaScript", icon: "devicon-javascript-plain colored" },
     { name: "NodeJS", icon: "devicon-nodejs-plain colored" },
     { name: "TypeScript", icon: "devicon-typescript-plain colored" },
-    {
-      name: "MSSQL",
-      icon: "devicon-microsoftsqlserver-plain-wordmark colored",
-    },
     { name: "Python", icon: "devicon-python-plain colored" },
-    { name: "Vue", icon: "devicon-vuejs-plain colored" },
     { name: "Git", icon: "devicon-git-plain colored" },
-    { name: "Bash", icon: "devicon-bash-plain" },
   ];
 
   const observer = new IntersectionObserver(async (entry) => {
@@ -46,7 +38,7 @@ const Skills = ({}) => {
     return () => {
       if (!isMobile()) observer.unobserve(element.current);
     };
-  }, []);
+  });
 
   const onMouseEnter = async () => {
     for (let i in skills.current) {
@@ -63,14 +55,8 @@ const Skills = ({}) => {
   };
 
   const isMobile = () => {
-    if (
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      )
-    )
-      return true;
-
-    return false;
+    return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i) // who seriously uses blackberry in this day and age...
+      .test(navigator.userAgent);
   };
 
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -83,15 +69,17 @@ const Skills = ({}) => {
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
         >
-          <AiFillFire /> Stack
+          <AiFillFire />Skills
         </div>
         <div className="line"></div>
+
+
         <div className="skills-content">
           {langs.map((item, index) => (
             <div className="skill" key={index}>
               <i className={item.icon}></i>
               <div className="blocky">{item.name}</div>
-              <div className="blocky-connector"></div>
+              <div className="blocky-connector" />
             </div>
           ))}
         </div>
