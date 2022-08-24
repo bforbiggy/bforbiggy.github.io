@@ -25,8 +25,10 @@ const HomePage = () => {
       <Intro />
       <WhoAmI />
       <Spacer layerSvg={layer2} />
+
       <Skills />
       <Spacer layerSvg={layer3} />
+
       <Projects />
       <Footer />
     </div>

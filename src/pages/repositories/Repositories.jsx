@@ -26,25 +26,24 @@ const Repositories = () => {
 
   useEffect(() => {
     (async () => {
-      let data = await fetch("https://api.github.com/users/bforbiggy/repos").then(
+      // Retrieve and set repository data
+      let repoData = await fetch("https://api.github.com/users/bforbiggy/repos").then(
         (response) => response.json()
       );
+      setRepos(repoData
+        .filter((item) => {
+          return !item.fork;
+        })
+        .sort((a, b) => {
+          return b.stargazers_count - a.stargazers_count;
+        })
+      );
 
-      let user = await fetch("https://api.github.com/users/bforbiggy").then(
+      // Retrieve and set user data
+      let userData = await fetch("https://api.github.com/users/bforbiggy").then(
         (response) => response.json()
       );
-
-      setRepos(
-        data
-          .filter((item) => {
-            return !item.fork;
-          })
-          .sort((a, b) => {
-            return b.stargazers_count - a.stargazers_count;
-          })
-      );
-
-      setUser(user);
+      setUser(userData);
 
       setIsFetching(false);
     })();
@@ -94,11 +93,11 @@ const Repositories = () => {
             </div>
             <div className="repositories">
               <div className="title">bforbiggy@Repositories:~ $</div>
-              {repos.length > 0 ? (
+              {repos.length > 0 && (
                 repos?.map((data) => (
                   <a
                     href={data.html_url}
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     className="repository-container"
                   >
                     <div className="name">
@@ -118,12 +117,14 @@ const Repositories = () => {
                           {data.language ?? "null"}
                         </div>
                       </div>
+
                       <div className="item">
-                        <div className="key">Created Date</div>
+                        <div className="key">Created On</div>
                         <div className="value">
                           {new Date(data.created_at).toLocaleDateString()}
                         </div>
                       </div>
+
                       <div className="item">
                         <div className="key">
                           <FaStar />
@@ -133,8 +134,6 @@ const Repositories = () => {
                     </div>
                   </a>
                 ))
-              ) : (
-                <></>
               )}
             </div>
           </>

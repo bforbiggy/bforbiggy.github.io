@@ -10,6 +10,7 @@ const ProjectLayout = () => {
         <main>
           <Outlet />
         </main>
+
         <Footer />
       </div>
     </>

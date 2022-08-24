@@ -29,7 +29,7 @@ const Menu = () => {
             </NavLink>
             <a
               href="https://github.com/bforbiggy"
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className="item"
               onClick={ToggleMenu}
             >

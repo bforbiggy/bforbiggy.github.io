@@ -1,7 +1,7 @@
+import { Suspense, useEffect, useState } from "react";
+import { createBrowserHistory } from "history";
 import { BrowserRouter } from "react-router-dom";
 import ClientRoutes from "./router/Routes";
-import { createBrowserHistory } from "history";
-import { Suspense, useEffect, useState } from "react";
 import Loader from "./core/loader/Loader";
 
 import "./App.scss";
