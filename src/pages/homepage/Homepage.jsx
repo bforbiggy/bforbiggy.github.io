@@ -8,7 +8,7 @@ import bg from "../../assets/sprinkle.svg";
 
 // Homepage exclusive components
 import Intro from "./components/Intro";
-import WhoAmI from "./components/WhoAmI";
+import AboutMe from "./components/AboutMe";
 import Spacer from "../../core/Spacers/Spacer";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
@@ -23,7 +23,7 @@ const HomePage = () => {
       style={{ backgroundImage: `url(${bg}` }}
     >
       <Intro />
-      <WhoAmI />
+      <AboutMe />
       <Spacer layerSvg={layer2} />
 
       <Skills />

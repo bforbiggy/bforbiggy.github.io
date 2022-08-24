@@ -2,13 +2,16 @@ import React from "react";
 import { IoSparkles } from "react-icons/io5";
 import { HiSparkles } from "react-icons/hi";
 
-const WhoAmI = () => {
+const AboutMe = () => {
   return (
     <section className="maron">
       <div className="content-container">
         <div
           className="sparkle"
-          style={{ top: "20%", left: "20%", color: "#262853" }}
+          style={{
+            top: "20%", left: "20%",
+            color: "#262853"
+          }}
         >
           <HiSparkles />
         </div>
@@ -47,28 +50,26 @@ const WhoAmI = () => {
         >
           <IoSparkles />
         </div>
-        <div className="whoami">
+        <div className="aboutme">
           <div className="title">
-            <h1>whoami</h1>
+            <h1>About Me</h1>
           </div>
           <div className="text">
             <p>
               <strong>
-                Hiya! On the internet I appear under the name
-                <span className="k-word"> bforbiggy</span>, as for now
-                <span className="k-word"> 20 </span>years old professional
+                Hello! On the internet I appear under the name
+                <span className="k-word"> biggy</span>, as a
+                <span className="k-word"> 20</span> years old
                 Fullstack developer <span className="k-word">&&</span> software
                 engineering student.
               </strong>
               <br />
             </p>
+
             <p>
-              I'm passionate about coding and though I consider{" "}
-              <span className="k-word">.NET</span> as my main technology I'm
-              always open for learning and mastering new ones!
-              <br />
-              My future goal is to work with Artificial Intelligence
-              development.
+              I'm incredibly passionate about coding and my personal favorite is
+              technology is<span className="k-word"> .NET</span> though I love
+              learning new languages and technologies!
             </p>
           </div>
         </div>
@@ -77,4 +78,4 @@ const WhoAmI = () => {
   );
 };
 
-export default WhoAmI;
+export default AboutMe;

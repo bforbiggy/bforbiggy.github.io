@@ -16,10 +16,10 @@ const Loader = ({ local = false }) => {
   return (
     <div className="loader" style={loaderClass}>
       <div className="lds-ring">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div />
+        <div />
+        <div />
+        <div />
       </div>
     </div>
   );
