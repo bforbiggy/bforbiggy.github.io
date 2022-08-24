@@ -26,18 +26,17 @@ const Repositories = () => {
 
   useEffect(() => {
     (async () => {
-      // Retrieve and set repository data
-      let repoData = await fetch("https://api.github.com/users/bforbiggy/repos").then(
-        (response) => response.json()
-      );
-      setRepos(repoData
-        .filter((item) => {
-          return !item.fork;
-        })
-        .sort((a, b) => {
-          return b.stargazers_count - a.stargazers_count;
-        })
-      );
+      // Retrieve and set repository data (after filters/sorts)
+      let repoData = await fetch("https://api.github.com/users/bforbiggy/repos")
+        .then(response => response.json())
+        .then(response => response
+          .filter((item) => {
+            return !item.fork;
+          })
+          .sort((a, b) => {
+            return b.stargazers_count - a.stargazers_count;
+          }))
+      setRepos(repoData);
 
       // Retrieve and set user data
       let userData = await fetch("https://api.github.com/users/bforbiggy").then(
