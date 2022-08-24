@@ -5,16 +5,16 @@ const Skills = () => {
   const skills = useRef();
   let element = useRef();
   const langs = [
-    { name: "C#", icon: "devicon-csharp-plain colored" },
-    { name: ".NET", icon: "devicon-dot-net-plain colored" },
-    { name: "HTML", icon: "devicon-html5-plain colored" },
-    { name: "CSS", icon: "devicon-css3-plain colored" },
-    { name: "React", icon: "devicon-react-original colored" },
-    { name: "Java", icon: "devicon-java-plain colored" },
-    { name: "JavaScript", icon: "devicon-javascript-plain colored" },
-    { name: "NodeJS", icon: "devicon-nodejs-plain colored" },
-    { name: "Python", icon: "devicon-python-plain colored" },
-    { name: "Git", icon: "devicon-git-plain colored" },
+    { name: "C#", icon: "devicon-csharp-plain colored", link: "https://docs.microsoft.com/en-us/dotnet/csharp/" },
+    { name: ".NET", icon: "devicon-dot-net-plain colored", link: "https://docs.microsoft.com/en-us/dotnet/" },
+    { name: "HTML", icon: "devicon-html5-plain colored", link: "https://html.com" },
+    { name: "CSS", icon: "devicon-css3-plain colored", link: "https://www.w3.org/TR/CSS/#css" },
+    { name: "React", icon: "devicon-react-original colored", link: "https://reactjs.org" },
+    { name: "Java", icon: "devicon-java-plain colored", link: "https://www.oracle.com/java/" },
+    { name: "JavaScript", icon: "devicon-javascript-plain colored", link: "https://www.javascript.com" },
+    { name: "NodeJS", icon: "devicon-nodejs-plain colored", link: "https://nodejs.org/en/" },
+    { name: "Python", icon: "devicon-python-plain colored", link: "https://www.python.org" },
+    { name: "Git", icon: "devicon-git-plain colored", link: "https://git-scm.com" },
   ];
 
   const observer = new IntersectionObserver(async (entry) => {
@@ -77,9 +77,15 @@ const Skills = () => {
         <div className="skills-content">
           {langs.map((item, index) => (
             <div className="skill" key={index}>
-              <i className={item.icon}></i>
-              <div className="blocky">{item.name}</div>
-              <div className="blocky-connector" />
+              <a
+                href={item.link}
+                target="_blank" rel="noreferrer">
+
+                <i className={item.icon} />
+                <div className="blocky">{item.name}</div>
+                <div className="blocky-connector" />
+
+              </a>
             </div>
           ))}
         </div>
