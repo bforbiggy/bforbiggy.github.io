@@ -7,58 +7,63 @@ const Projects = () => {
         <div className="projects-title">
           <h1>Personal Projects</h1>
         </div>
+
         <div className="projects-container">
           <a
-            href="https://github.com/HueByte/Huppy"
-            target="_blank"
-            className="item" rel="noreferrer"
+            href="https://github.com/bforbiggy/bforbiggy.github.io"
+            target="_blank" rel="noreferrer"
+            className="item"
           >
             <div className="icon">
               <img
-                src="https://i.pinimg.com/564x/ff/c1/59/ffc1594020481a2e64f285f6b4d7ea06.jpg"
-                alt="huppy"
+                src="https://avatars.githubusercontent.com/u/22730639?v=4"
+                alt="Github Portfolio Site"
+                loading="lazy"
+              />
+            </div>
+            <div className="background" />
+            <div className="title">
+              <h2>Portfolio Site</h2>
+            </div>
+            <div className="description">
+              You're looking at it! This portfolio site helps me track my personal progress
+              and provides an outlet for my imagination!
+            </div>
+          </a>
+
+
+          <a
+            href="https://github.com/bforbiggy/DonetBot"
+            target="_blank" rel="noreferrer"
+            className="item"
+          >
+            <div className="icon">
+              <img
+                src="https://cdn.discordapp.com/avatars/974394845164625970/c9a788bc0af08f7bd101fd6c05472e53.png"
+                alt="Donet Bot"
                 loading="lazy"
               />
             </div>
             <div className="background"></div>
             <div className="title">
-              <h2>Huppy</h2>
+              <h2>Donet Bot</h2>
             </div>
             <div className="description">
-              Discord bot where I'm using my experience from ASP.NET to reach
-              its full potential and performance.
+              A discord bot with miscellaneous features for fun and utility.
+              Uses AAS to perform image modifications and provide ai chat functionality.
             </div>
           </a>
+
+
           <a
-            href="https://github.com/HueByte/MyThingsSaver"
+            href="https://github.com/bforbiggy/image-filter-tools"
             target="_blank"
             className="item" rel="noreferrer"
           >
             <div className="icon">
               <img
-                src="https://raw.githubusercontent.com/HueByte/MyThingsSaver/master/backend/App/client/public/favicon.png"
-                alt="huppy"
-                loading="lazy"
-              />
-            </div>
-            <div className="background"></div>
-            <div className="title">
-              <h2>My Things Saver</h2>
-            </div>
-            <div className="description">
-              Modern and comfortable application with a powerful markdown
-              editor.
-            </div>
-          </a>
-          <a
-            href="https://huebyte.github.io/PrintIt3D/"
-            target="_blank"
-            className="item" rel="noreferrer"
-          >
-            <div className="icon">
-              <img
-                src="https://huebyte.github.io/PrintIt3D/logo.png"
-                alt="huppy"
+                src="https://t3.ftcdn.net/jpg/04/21/36/18/360_F_421361860_zjgcITz10qk8pRQMxdDF4erMml6QUUYK.jpg"
+                alt="Img Filter Tools"
                 loading="lazy"
               />
             </div>
@@ -67,53 +72,58 @@ const Projects = () => {
               <h2>Print it 3D</h2>
             </div>
             <div className="description">
-              Website I've made for university project about imaginary business.
-              I'm quite happy with the result <br />
-              (Desktop Only)
+              A libray used for performing image operations such as edge detection,
+              denoising, sharpening and my favorite: ascii conversion. <br />
+              Available as a dll and as a command line executable.
             </div>
           </a>
+
+
           <a
-            href="https://github.com/HueByte/HueBot-Public"
+            href="https://github.com/bforbiggy/chatting-site"
             target="_blank"
             className="item" rel="noreferrer"
           >
             <div className="icon">
               <img
-                src="https://camo.githubusercontent.com/9ccc5063ed331c7a045ed05b7c37d9764228bb5ec6744571ad5bc8c469c7d356/68747470733a2f2f692e70696e696d672e636f6d2f6f726967696e616c732f30632f36372f35612f30633637356138653130363134373864326237623231623333303039333434342e676966"
-                alt="huppy"
+                src="https://c.tenor.com/3d-RsLByvSIAAAAd/chinese-discord.gif"
+                alt="Chatting Site (Front End)"
                 loading="lazy"
               />
             </div>
             <div className="background"></div>
             <div className="title">
-              <h2>HueBot</h2>
+              <h2>Chatting Site (Front End)</h2>
             </div>
             <div className="description">
-              One of my first bigger projects, bot made for fun with quite a few
-              random ideas
+              Larger project site that helped me familiarize myself
+              with React and it's interactions with html/css.
             </div>
           </a>
+
+
           <a
-            href="https://github.com/HueByte/CapitalCloud"
+            href="https://github.com/bforbiggy/chatting-backend"
             target="_blank"
             className="item" rel="noreferrer"
           >
             <div className="icon">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Circle-icons-cloud.svg/2048px-Circle-icons-cloud.svg.png"
-                alt="huppy"
+                src="https://upload.wikimedia.org/wikipedia/en/5/59/Padlock.svg"
+                alt="Chatting Site (Back End)"
                 loading="lazy"
               />
             </div>
             <div className="background"></div>
             <div className="title">
-              <h2>Capital Cloud</h2>
+              <h2>Chatting Site (Back End)</h2>
             </div>
             <div className="description">
-              Project I've used for discovering SignalR technology & with chat
-              feature
+              Larger project backend that gave me the chance to learn about
+              REST, mongoDB and basic password security. <br />(Privated for security.)
             </div>
           </a>
+
         </div>
       </div>
     </section>

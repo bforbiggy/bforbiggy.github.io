@@ -7,6 +7,7 @@ const AboutMe = () => {
     <section className="maron">
       <div className="content-container">
 
+        {/* All the sparkles */}
         <div className="sparkle" style={{
           top: "20%", left: "20%",
           animationDuration: "3s"
@@ -38,6 +39,7 @@ const AboutMe = () => {
           <IoSparkles style={{ color: "#171718" }} />
         </div>
 
+        { /** Personal information */}
         <div className="aboutme">
           <div className="title">
             <h1>About Me</h1>
