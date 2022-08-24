@@ -59,83 +59,80 @@ const Repositories = () => {
       style={{ backgroundImage: `url(${bg}` }}
     >
       <main>
-        {isFetching ? (
-          <Loader local={true} />
-        ) : (
-          <>
-            <div className="user">
-              {user && (
-                <>
-                  <div className="avatar">
-                    <img src="https://github.com/bforbiggy.png" alt="Biggy's pfp" />
+        {isFetching ? <Loader local={true} /> : (<>
+          <div className="user">
+            {user && (<>
+              <div className="avatar">
+                <img src="https://github.com/bforbiggy.png" alt="Biggy's pfp" />
+              </div>
+              <div className="user-info">
+                <div className="name">🎴 {user.login} 🎴</div>
+                <div className="bio">{user.bio}</div>
+                <div className="field">
+                  <div className="key">
+                    <RiGitRepositoryFill />
+                    Repositories:~ ${" "}
                   </div>
-                  <div className="user-info">
-                    <div className="name">🍧 {user.login} 🍧</div>
-                    <div className="bio">{user.bio}</div>
-                    <div className="field">
-                      <div className="key">
-                        <RiGitRepositoryFill />
-                        Repositories:~ ${" "}
+                  <div className="value">{user.public_repos}</div>
+                </div>
+                <div className="field">
+                  <div className="key">
+                    <RiUserFollowLine />
+                    Followers:~ ${" "}
+                  </div>
+                  <div className="value">{user.followers}</div>
+                </div>
+              </div>
+            </>
+            )}
+          </div>
+
+          <div className="repositories">
+            <div className="title">bforbiggy@Repositories:~ $</div>
+            {repos.length > 0 && (
+              repos?.map((data) => (
+                <a
+                  href={data.html_url}
+                  target="_blank" rel="noreferrer"
+                  className="repository-container"
+                >
+                  <div className="name">
+                    <RiGitBranchLine /> {data.name}
+                  </div>
+                  <div className="description">{data.description}</div>
+                  <div className="info-container">
+                    <div className="item">
+                      <div className="key">Main Language</div>
+                      <div
+                        className="value"
+                        style={{
+                          color: getLanguageColor(data.language),
+                          fontSize: "1.1em",
+                        }}
+                      >
+                        {data.language ?? "null"}
                       </div>
-                      <div className="value">{user.public_repos}</div>
                     </div>
-                    <div className="field">
-                      <div className="key">
-                        <RiUserFollowLine />
-                        Followers:~ ${" "}
+
+                    <div className="item">
+                      <div className="key">Created On</div>
+                      <div className="value">
+                        {new Date(data.created_at).toLocaleDateString()}
                       </div>
-                      <div className="value">{user.followers}</div>
+                    </div>
+
+                    <div className="item">
+                      <div className="key">
+                        <FaStar />
+                      </div>
+                      <div className="value">{data.stargazers_count}</div>
                     </div>
                   </div>
-                </>
-              )}
-            </div>
-            <div className="repositories">
-              <div className="title">bforbiggy@Repositories:~ $</div>
-              {repos.length > 0 && (
-                repos?.map((data) => (
-                  <a
-                    href={data.html_url}
-                    target="_blank" rel="noreferrer"
-                    className="repository-container"
-                  >
-                    <div className="name">
-                      <RiGitBranchLine /> {data.name}
-                    </div>
-                    <div className="description">{data.description}</div>
-                    <div className="info-container">
-                      <div className="item">
-                        <div className="key">Main Language</div>
-                        <div
-                          className="value"
-                          style={{
-                            color: getLanguageColor(data.language),
-                            fontSize: "1.1em",
-                          }}
-                        >
-                          {data.language ?? "null"}
-                        </div>
-                      </div>
-
-                      <div className="item">
-                        <div className="key">Created On</div>
-                        <div className="value">
-                          {new Date(data.created_at).toLocaleDateString()}
-                        </div>
-                      </div>
-
-                      <div className="item">
-                        <div className="key">
-                          <FaStar />
-                        </div>
-                        <div className="value">{data.stargazers_count}</div>
-                      </div>
-                    </div>
-                  </a>
-                ))
-              )}
-            </div>
-          </>
+                </a>
+              ))
+            )}
+          </div>
+        </>
         )}
       </main>
       <Footer />

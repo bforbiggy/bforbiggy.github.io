@@ -1,7 +1,7 @@
 import { Suspense, useEffect, useState } from "react";
 import { createBrowserHistory } from "history";
 import { BrowserRouter } from "react-router-dom";
-import ClientRoutes from "./router/Routes";
+import SiteRouter from "./router/SiteRouter";
 import Loader from "./core/loader/Loader";
 
 import "./App.scss";
@@ -33,7 +33,7 @@ function App() {
   return (
     <BrowserRouter history={history}>
       <Suspense fallback={<Loader />}>
-        {isLoading ? <Loader /> : <ClientRoutes />}
+        {isLoading ? <Loader /> : <SiteRouter />}
       </Suspense>
     </BrowserRouter>
   );

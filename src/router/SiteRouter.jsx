@@ -7,7 +7,7 @@ const Repositories = React.lazy(() => import("../pages/repositories/Repositories
 const MyThingsSaver = React.lazy(() => import("../pages/projects/MyThingsSaver/MyThingsSaver"));
 const ProjectLayout = React.lazy(() => import("../core/ProjectLayout/ProjectLayout"));
 
-const ClientRoutes = () => {
+const SiteRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<Main />}>
@@ -24,12 +24,10 @@ const ClientRoutes = () => {
 };
 
 const Main = () => {
-  return (
-    <>
-      <Menu />
-      <Outlet />
-    </>
-  );
+  return <>
+    <Menu />
+    <Outlet />
+  </>
 };
 
-export default ClientRoutes;
+export default SiteRouter;

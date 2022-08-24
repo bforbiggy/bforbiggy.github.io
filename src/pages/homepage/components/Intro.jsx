@@ -9,27 +9,29 @@ const Intro = () => {
       <div className="avatar">
         <img src="https://github.com/bforbiggy.png" alt="Bforbiggy's pfp" />
       </div>
+
       <div className="buttons-container">
         <a
           href="https://discordapp.com/users/187003715302064128"
-          target="_blank"
-          className="basic-button button" rel="noreferrer"
+          target="_blank" rel="noreferrer"
+          className="basic-button button"
         >
           <FaDiscord />
           Discord
         </a>
         <a
           href="https://github.com/bforbiggy"
-          target="_blank"
-          className="basic-button button" rel="noreferrer"
+          target="_blank" rel="noreferrer"
+          className="basic-button button"
         >
           <AiFillGithub /> Github
         </a>
       </div>
+
       <div
         className="intro-spacer"
         style={{ backgroundImage: `url(${layer1}` }}
-      ></div>
+      />
     </div>
   );
 };
