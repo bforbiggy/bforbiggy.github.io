@@ -15,6 +15,7 @@ const Menu = () => {
       >
         <HiMenu />
       </div>
+
       <div className={`menu${isExpanded ? "" : " menu-hidden"}`}>
         <div className="menu-container">
           <div
@@ -23,10 +24,14 @@ const Menu = () => {
           >
             <HiOutlineX />
           </div>
+
+
           <div className="menu-items">
             <NavLink to="/" className="item" onClick={ToggleMenu}>
               Home
             </NavLink>
+
+
             <a
               href="https://github.com/bforbiggy"
               target="_blank" rel="noreferrer"
@@ -35,6 +40,8 @@ const Menu = () => {
             >
               Github
             </a>
+
+
             <NavLink to="/Repositories" className="item" onClick={ToggleMenu}>
               Repositories
             </NavLink>
