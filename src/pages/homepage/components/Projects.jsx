@@ -69,7 +69,7 @@ const Projects = () => {
             </div>
             <div className="background"></div>
             <div className="title">
-              <h2>Print it 3D</h2>
+              <h2>Image Filter Tools</h2>
             </div>
             <div className="description">
               A libray used for performing image operations such as edge detection,
