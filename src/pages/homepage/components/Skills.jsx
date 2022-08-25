@@ -71,22 +71,19 @@ const Skills = () => {
         >
           <AiFillFire />Skills
         </div>
-        <div className="line"></div>
-
+        <div className="line" />
 
         <div className="skills-content">
           {langs.map((item, index) => (
-            <div className="skill" key={index}>
-              <a
-                href={item.link}
-                target="_blank" rel="noreferrer">
-
+            <a
+              href={item.link}
+              target="_blank" rel="noreferrer">
+              <div className="skill" key={index}>
                 <i className={item.icon} />
                 <div className="blocky">{item.name}</div>
                 <div className="blocky-connector" />
-
-              </a>
-            </div>
+              </div>
+            </a>
           ))}
         </div>
       </div>
