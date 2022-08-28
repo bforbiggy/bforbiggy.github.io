@@ -4,7 +4,7 @@ import Menu from "../core/menu/Menu";
 import HomePage from "../pages/homepage/Homepage";
 
 const Repositories = React.lazy(() => import("../pages/repositories/Repositories"));
-const ProjectLayout = React.lazy(() => import("../core/ProjectLayout/ProjectLayout"));
+const Links = React.lazy(() => import("../pages/links/Links"));
 
 // const ft = React.lazy(() => import("../pages/projects/ImageFilterTools"));
 // {/* <Route path="image-filter-tools" element={<ift />} /> */ }
@@ -14,9 +14,7 @@ const SiteRouter = () => {
     <Routes>
       <Route path="/" element={<Main />}>
         <Route index element={<HomePage />} />
-        <Route path="projects" element={<ProjectLayout />}>
-          <Route index element={<Navigate to="/" />} />
-        </Route>
+        <Route path="links" element={<Links />} />
         <Route path="repositories" element={<Repositories />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Route>

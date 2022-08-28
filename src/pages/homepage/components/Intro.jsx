@@ -7,7 +7,7 @@ const Intro = () => {
   return (
     <div className="intro">
       <div className="avatar">
-        <img src="https://github.com/bforbiggy.png" alt="Bforbiggy's pfp" />
+        <img src="https://i.imgur.com/fV9s2su.jpg" alt="Bforbiggy's pfp" />
       </div>
 
       <div className="buttons-container">
