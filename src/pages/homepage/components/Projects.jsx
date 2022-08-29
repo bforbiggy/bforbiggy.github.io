@@ -86,7 +86,7 @@ const Projects = () => {
           >
             <div className="icon">
               <img
-                src="https://c.tenor.com/3d-RsLByvSIAAAAd/chinese-discord.gif"
+                src="https://i.imgur.com/AI5PNdd.png"
                 alt="Chatting Site (Front End)"
                 loading="lazy"
               />
