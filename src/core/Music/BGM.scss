@@ -1,8 +1,8 @@
 .muter {
 	z-index: 999;
-	position: absolute;
-	top: 15px;
-	left: 65px;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
 	font-size: xx-large;
 	cursor: pointer;
 	transition: 200ms ease-in-out;

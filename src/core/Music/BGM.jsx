@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 
-import "./Muter.scss";
+import "./BGM.scss";
 import { TbMusic, TbMusicOff } from "react-icons/tb";
 import backgroundMusic from "../../assets/searching.mp3";
 
 const bgm = new Audio(backgroundMusic);
-const Muter = () => {
-	const [muted, setMuted] = useState(true);
+bgm.loop = true;
 
+const BGM = () => {
+	const [muted, setMuted] = useState(true);
 	const toggleMute = () => {
 		bgm.play();
 		bgm.muted = !muted;
@@ -21,4 +22,4 @@ const Muter = () => {
 	);
 }
 
-export default Muter;
+export default BGM;

@@ -10,13 +10,13 @@ const Menu = () => {
   return (
     <>
       <div
-        className={`menu-expander open${isExpanded ? " hide" : ""}`}
+        className={`menu-expander open ${isExpanded ? " hide" : ""}`}
         onClick={ToggleMenu}
       >
         <HiMenu />
       </div>
 
-      <div className={`menu${isExpanded ? "" : " menu-hidden"}`}>
+      <div className={`menu ${isExpanded ? "" : " menu-hidden"}`}>
         <div className="menu-container">
           <div
             className={`menu-expander close${isExpanded ? "" : " hide"}`}
