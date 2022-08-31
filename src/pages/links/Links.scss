@@ -1,11 +1,20 @@
+@use "../../styles/theme" as theme;
+
 .links-container {
-	height: 100%;
+	height: 100vh;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
+
+	// background: linear-gradient(
+	// 	theme.$swamp,
+	// 	theme.$swamp-lighter,
+	// 	theme.$bittersweet
+	// );
+	// background-size: cover;
 
 	.title {
 		margin-top: 4em;
@@ -35,7 +44,6 @@
 
 			border-radius: 30px;
 			border: 2px solid rgb(20, 130, 233);
-			background-color: darkviolet;
 
 			margin-top: 1em;
 			margin-bottom: 1em;
