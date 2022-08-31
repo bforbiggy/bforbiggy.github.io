@@ -1,0 +1,15 @@
+.muter {
+	z-index: 999;
+	position: absolute;
+	top: 15px;
+	left: 65px;
+	font-size: xx-large;
+	cursor: pointer;
+	transition: 200ms ease-in-out;
+	backdrop-filter: blur(2px);
+	border-radius: 100%;
+
+	&:hover {
+		transform: scale(1.4);
+	}
+}

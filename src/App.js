@@ -2,11 +2,11 @@ import { Suspense, useEffect, useState } from "react";
 import { createBrowserHistory } from "history";
 import { BrowserRouter } from "react-router-dom";
 import SiteRouter from "./router/SiteRouter";
-import Loader from "./core/loader/Loader";
+import Loader from "./core/Loader/Loader";
 
 import "./App.scss";
 
-function App() {
+const App = () => {
   const history = createBrowserHistory();
   const [isLoading, setIsLoading] = useState(true);
 

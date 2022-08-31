@@ -9,6 +9,7 @@
 	justify-content: center;
 	position: relative;
 
+	background-image: url("../../assets/squares.svg");
 	// background: linear-gradient(
 	// 	theme.$swamp,
 	// 	theme.$swamp-lighter,
@@ -37,7 +38,7 @@
 		height: 100%;
 
 		.link {
-			max-height: 60px;
+			max-height: 55px;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -50,12 +51,12 @@
 
 			svg {
 				width: auto;
-				height: 3rem;
+				height: 3.5rem;
 				margin-left: 1rem;
 			}
 
 			p {
-				margin-right: 1.5em; // Match half of svg width
+				margin-right: 1.75em; // Match half of svg width
 
 				align-items: center;
 				vertical-align: middle;

@@ -74,13 +74,13 @@ const Skills = () => {
         <div className="line" />
 
         <div className="skills-content">
-          {langs.map((item, index) => (
+          {langs.map((lang, index) => (
             <a
-              href={item.link}
+              href={lang.link}
               target="_blank" rel="noreferrer">
-              <div className="skill" key={index}>
-                <i className={item.icon} />
-                <div className="blocky">{item.name}</div>
+              <div className="skill" key={lang.name}>
+                <i className={lang.icon} />
+                <div className="blocky">{lang.name}</div>
                 <div className="blocky-connector" />
               </div>
             </a>

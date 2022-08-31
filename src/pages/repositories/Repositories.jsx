@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../../core/Footer/Footer";
-import Loader from "../../core/loader/Loader";
+import Loader from "../../core/Loader/Loader";
 import "./Repositories.scss";
 import {
   RiGitBranchLine,
@@ -56,7 +56,7 @@ const Repositories = () => {
   return (
     <div
       className="repositories-container"
-      style={{ backgroundImage: `url(${bg}` }}
+      style={{ backgroundImage: `url(${bg})` }}
     >
       <main>
         {isFetching ? <Loader local={true} /> : (<>
