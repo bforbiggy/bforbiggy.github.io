@@ -8,7 +8,7 @@ const Links = () => {
 		<div className="links-container">
 			<div className="title">
 				<h1>Links</h1>
-				<img src={Flourish} alt="" color="#E64B2A"></img>
+				<img src={Flourish} alt="" />
 			</div>
 
 			<div className="linkedlist">
