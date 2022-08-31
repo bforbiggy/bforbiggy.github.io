@@ -1,6 +1,7 @@
 import "../../styles/CoreStyles.scss";
 import "./Links.scss";
-import { AiFillGithub } from "react-icons/ai";
+import React from "react";
+import { AiFillGithub, AiFillHeart } from "react-icons/ai";
 import Flourish from "../../assets/flourish.svg";
 
 const Links = () => {
@@ -13,13 +14,16 @@ const Links = () => {
 
 			<div className="linkedlist">
 
-				<div className="link">
+
+				<div className="link" >
 					<AiFillGithub />
 					<p>Github</p>
 				</div>
 
+
 				<div className="link">
-					<p>Super Big Long Link</p>
+					<AiFillHeart />
+					<p>Jeffrey big bonkers</p>
 				</div>
 			</div>
 		</div>
