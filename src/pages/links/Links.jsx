@@ -23,7 +23,7 @@ const Links = () => {
 
 				<div className="link">
 					<AiFillHeart />
-					<p>Jeffrey big bonkers</p>
+					<p>Onlyfans</p>
 				</div>
 			</div>
 		</div>

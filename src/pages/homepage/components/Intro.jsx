@@ -19,12 +19,14 @@ const Intro = () => {
           <FaDiscord />
           Discord
         </a>
+
         <a
           href="https://github.com/bforbiggy"
           target="_blank" rel="noreferrer"
           className="basic-button button"
         >
-          <AiFillGithub /> Github
+          <AiFillGithub />
+          Github
         </a>
       </div>
 

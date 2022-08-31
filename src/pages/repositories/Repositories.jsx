@@ -89,48 +89,47 @@ const Repositories = () => {
 
           <div className="repositories">
             <div className="title">bforbiggy@Repositories:~ $</div>
-            {repos.length > 0 && (
-              repos?.map((data) => (
-                <a
-                  href={data.html_url}
-                  target="_blank" rel="noreferrer"
-                  className="repository-container"
-                >
-                  <div className="name">
-                    <RiGitBranchLine /> {data.name}
-                  </div>
-                  <div className="description">{data.description}</div>
-                  <div className="info-container">
-                    <div className="item">
-                      <div className="key">Main Language</div>
-                      <div
-                        className="value"
-                        style={{
-                          color: getLanguageColor(data.language),
-                          fontSize: "1.1em",
-                        }}
-                      >
-                        {data.language ?? "null"}
-                      </div>
-                    </div>
-
-                    <div className="item">
-                      <div className="key">Created On</div>
-                      <div className="value">
-                        {new Date(data.created_at).toLocaleDateString()}
-                      </div>
-                    </div>
-
-                    <div className="item">
-                      <div className="key">
-                        <FaStar />
-                      </div>
-                      <div className="value">{data.stargazers_count}</div>
+            {repos?.map((data) => (
+              <a
+                href={data.html_url}
+                target="_blank" rel="noreferrer"
+                className="repository-container"
+              >
+                <div className="name">
+                  <RiGitBranchLine /> {data.name}
+                </div>
+                <div className="description">{data.description}</div>
+                <div className="info-container">
+                  <div className="item">
+                    <div className="key">Main Language</div>
+                    <div
+                      className="value"
+                      style={{
+                        color: getLanguageColor(data.language),
+                        fontSize: "1.1em",
+                      }}
+                    >
+                      {data.language ?? "null"}
                     </div>
                   </div>
-                </a>
-              ))
-            )}
+
+                  <div className="item">
+                    <div className="key">Created On</div>
+                    <div className="value">
+                      {new Date(data.created_at).toLocaleDateString()}
+                    </div>
+                  </div>
+
+                  <div className="item">
+                    <div className="key">
+                      <FaStar />
+                    </div>
+                    <div className="value">{data.stargazers_count}</div>
+                  </div>
+                </div>
+              </a>
+            ))
+            }
           </div>
         </>
         )}
