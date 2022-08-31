@@ -2,11 +2,11 @@ import React from "react";
 import { Route, Routes, Navigate, Outlet } from "react-router-dom";
 
 import Menu from "../core/Menu/Menu";
-import BGM from "../core/Music/BGM";
 
 import HomePage from "../pages/homepage/Homepage";
 const Repositories = React.lazy(() => import("../pages/repositories/Repositories"));
 const Links = React.lazy(() => import("../pages/links/Links"));
+const BGM = React.lazy(() => import("../core/Music/BGM"));
 
 const SiteRouter = () => {
   return (
