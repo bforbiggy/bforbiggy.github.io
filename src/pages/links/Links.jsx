@@ -1,7 +1,7 @@
 import "../../styles/CoreStyles.scss";
 import "./Links.scss";
 import React from "react";
-import { AiFillGithub, AiFillHeart, AiOutlineMail } from "react-icons/ai";
+import { AiFillGithub, AiOutlineMail, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
 import { SiLeetcode } from "react-icons/si";
 import { FaDiscord } from "react-icons/fa"
 import { ReactComponent as Flourish } from "../../assets/flourish.svg";
@@ -9,9 +9,10 @@ import { ReactComponent as Flourish } from "../../assets/flourish.svg";
 const links = [
 	{ text: "Email", icon: <AiOutlineMail />, url: "mailto:andyhecsp@gmail.com" },
 	{ text: "Discord", icon: <FaDiscord />, url: "https://discordapp.com/users/187003715302064128" },
+	{ text: "Twitter", icon: <AiOutlineTwitter />, url: "https://twitter.com/bforbiggy" },
 	{ text: "Github", icon: <AiFillGithub />, url: "https://bforbiggy.github.io" },
+	{ text: "LinkedIn", icon: <AiFillLinkedin />, url: "https://www.linkedin.com/in/andy-he-a31771242/" },
 	{ text: "LeetCode", icon: <SiLeetcode />, url: "https://leetcode.com/bforbiggy/" },
-	{ text: "Onlyfans", icon: <AiFillHeart />, url: "https://www.onlyfans.com/biggy" },
 ];
 
 const Links = () => {
