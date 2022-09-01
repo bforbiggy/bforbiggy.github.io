@@ -6,12 +6,13 @@ import backgroundMusic from "../../assets/searching.mp3";
 
 const bgm = new Audio(backgroundMusic);
 bgm.loop = true;
+bgm.volume = 0.5;
 
 const BGM = () => {
 	const [muted, setMuted] = useState(true);
 	const toggleMute = () => {
-		bgm.play();
 		bgm.muted = !muted;
+		bgm.muted ? bgm.pause() : bgm.play();
 		setMuted(!muted);
 	};
 

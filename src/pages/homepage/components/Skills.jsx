@@ -61,6 +61,7 @@ const Skills = () => {
     }
   };
 
+  const mobile = isMobile();
   return (
     <section id="skill-container" style={{ position: "relative" }}>
       <div className="skills-container" id="skillContainer">
@@ -71,17 +72,20 @@ const Skills = () => {
 
         <div className="skills-content">
           {langs.map((lang, index) => {
-            const skill = (<div className="skill" key={lang.name}>
-              <i className={lang.icon} />
-              <div className="blocky">{lang.name}</div>
-              <div className="blocky-connector" />
-            </div>);
-
-            return isMobile() ? skill :
+            return mobile ?
+              // Mobile users shouldn't click skills
+              <div className="skill" key={index}>
+                <i className={lang.icon} />
+                <div className="blocky">{lang.name}</div>
+                <div className="blocky-connector" />
+              </div> :
+              // Pc users can click skills all they want :O
               <a
-                href={lang.link}
+                href={lang.link} className="skill" key={index}
                 target="_blank" rel="noreferrer">
-                {skill}
+                <i className={lang.icon} />
+                <div className="blocky">{lang.name}</div>
+                <div className="blocky-connector" />
               </a>;
           })}
         </div>

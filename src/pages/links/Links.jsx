@@ -4,7 +4,7 @@ import React from "react";
 import { AiFillGithub, AiFillHeart, AiOutlineMail } from "react-icons/ai";
 import { SiLeetcode } from "react-icons/si";
 import { FaDiscord } from "react-icons/fa"
-import Flourish from "../../assets/flourish.svg";
+import { ReactComponent as Flourish } from "../../assets/flourish.svg";
 
 const links = [
 	{ text: "Email", icon: <AiOutlineMail />, url: "mailto:andyhecsp@gmail.com" },
@@ -19,8 +19,8 @@ const Links = () => {
 		<div className="links-container">
 
 			<div className="title">
-				<h1>Links</h1>
-				<img src={Flourish} alt="" />
+				<p>Links</p>
+				<Flourish />
 			</div>
 
 			<div className="linkedlist">
