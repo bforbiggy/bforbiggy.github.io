@@ -1,9 +1,18 @@
 import "../../styles/CoreStyles.scss";
 import "./Links.scss";
 import React from "react";
-import { AiFillGithub, AiFillHeart } from "react-icons/ai";
+import { AiFillGithub, AiFillHeart, AiOutlineMail } from "react-icons/ai";
+import { SiLeetcode } from "react-icons/si";
+import { FaDiscord } from "react-icons/fa"
 import Flourish from "../../assets/flourish.svg";
 
+const links = [
+	{ text: "Email", icon: <AiOutlineMail />, url: "mailto:andyhecsp@gmail.com" },
+	{ text: "Discord", icon: <FaDiscord />, url: "https://discordapp.com/users/187003715302064128" },
+	{ text: "Github", icon: <AiFillGithub />, url: "https://bforbiggy.github.io" },
+	{ text: "LeetCode", icon: <SiLeetcode />, url: "https://leetcode.com/bforbiggy/" },
+	{ text: "Onlyfans", icon: <AiFillHeart />, url: "https://www.onlyfans.com" },
+];
 
 const Links = () => {
 	return (
@@ -15,18 +24,12 @@ const Links = () => {
 			</div>
 
 			<div className="linkedlist">
-
-
-				<div className="link" >
-					<AiFillGithub />
-					<p>Github</p>
-				</div>
-
-
-				<div className="link">
-					<AiFillHeart />
-					<p>Onlyfans</p>
-				</div>
+				{links.map((link) => (
+					<a href={link.url} className="link">
+						{link.icon}
+						<p>{link.text}</p>
+					</a>
+				))}
 			</div>
 		</div>
 	);
