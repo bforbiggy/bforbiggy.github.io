@@ -1,6 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { AiFillFire } from "react-icons/ai";
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+const isMobile = () => {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i) // who seriously uses blackberry in this day and age...
+    .test(navigator.userAgent);
+};
+
 const Skills = () => {
   const skills = useRef();
   let element = useRef();
@@ -30,14 +37,13 @@ const Skills = () => {
       document.getElementsByClassName("skill")
     );
 
-    if (!isMobile()) {
-      element.current = document.getElementById("skillContainer");
-      observer.observe(element.current);
-    }
+    // Mobile users don't get skill animations
+    if (isMobile())
+      return () => { };
 
-    return () => {
-      if (!isMobile()) observer.unobserve(element.current);
-    };
+    element.current = document.getElementById("skillContainer");
+    observer.observe(element.current);
+    return () => { observer.unobserve(element.current) };
   });
 
   const onMouseEnter = async () => {
@@ -54,21 +60,10 @@ const Skills = () => {
     }
   };
 
-  const isMobile = () => {
-    return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i) // who seriously uses blackberry in this day and age...
-      .test(navigator.userAgent);
-  };
-
-  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
   return (
     <section id="skill-container" style={{ position: "relative" }}>
       <div className="skills-container" id="skillContainer">
-        <div
-          className="skills-title"
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-        >
+        <div className="skills-title" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
           <AiFillFire />Skills
         </div>
         <div className="line" />
