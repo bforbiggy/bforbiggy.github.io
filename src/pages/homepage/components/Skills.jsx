@@ -70,17 +70,20 @@ const Skills = () => {
         <div className="line" />
 
         <div className="skills-content">
-          {langs.map((lang, index) => (
-            <a
-              href={lang.link}
-              target="_blank" rel="noreferrer">
-              <div className="skill" key={lang.name}>
-                <i className={lang.icon} />
-                <div className="blocky">{lang.name}</div>
-                <div className="blocky-connector" />
-              </div>
-            </a>
-          ))}
+          {langs.map((lang, index) => {
+            const skill = (<div className="skill" key={lang.name}>
+              <i className={lang.icon} />
+              <div className="blocky">{lang.name}</div>
+              <div className="blocky-connector" />
+            </div>);
+
+            return isMobile() ? skill :
+              <a
+                href={lang.link}
+                target="_blank" rel="noreferrer">
+                {skill}
+              </a>;
+          })}
         </div>
       </div>
     </section>
