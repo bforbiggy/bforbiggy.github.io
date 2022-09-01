@@ -9,19 +9,13 @@ const Menu = () => {
   const ToggleMenu = () => setIsExpanded(!isExpanded);
   return (
     <>
-      <div
-        className={`menu-expander open ${isExpanded ? " hide" : ""}`}
-        onClick={ToggleMenu}
-      >
+      <div className={`menu-expander open ${!isExpanded || "hide"}`} onClick={ToggleMenu}>
         <HiMenu />
       </div>
 
-      <div className={`menu ${isExpanded ? "" : " menu-hidden"}`}>
+      <div className={`menu ${isExpanded || "menu-hidden"}`}>
         <div className="menu-container">
-          <div
-            className={`menu-expander close${isExpanded ? "" : " hide"}`}
-            onClick={ToggleMenu}
-          >
+          <div className={`menu-expander close ${isExpanded || "hide"}`} onClick={ToggleMenu}>
             <HiOutlineX />
           </div>
 
@@ -31,18 +25,11 @@ const Menu = () => {
               Home
             </NavLink>
 
+            <NavLink to="/links" className="item" onClick={ToggleMenu}>
+              Links
+            </NavLink>
 
-            <a
-              href="https://github.com/bforbiggy"
-              target="_blank" rel="noreferrer"
-              className="item"
-              onClick={ToggleMenu}
-            >
-              Github
-            </a>
-
-
-            <NavLink to="/Repositories" className="item" onClick={ToggleMenu}>
+            <NavLink to="/repositories" className="item" onClick={ToggleMenu}>
               Repositories
             </NavLink>
           </div>

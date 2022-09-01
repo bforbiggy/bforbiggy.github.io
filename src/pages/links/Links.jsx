@@ -11,7 +11,7 @@ const links = [
 	{ text: "Discord", icon: <FaDiscord />, url: "https://discordapp.com/users/187003715302064128" },
 	{ text: "Github", icon: <AiFillGithub />, url: "https://bforbiggy.github.io" },
 	{ text: "LeetCode", icon: <SiLeetcode />, url: "https://leetcode.com/bforbiggy/" },
-	{ text: "Onlyfans", icon: <AiFillHeart />, url: "https://www.onlyfans.com" },
+	{ text: "Onlyfans", icon: <AiFillHeart />, url: "https://www.onlyfans.com/biggy" },
 ];
 
 const Links = () => {
