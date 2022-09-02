@@ -22,6 +22,7 @@ const langs = [
 ];
 
 const Skills = () => {
+  const mobile = isMobile();
   const skills = useRef();
   let skillContainer = useRef();
 
@@ -39,7 +40,7 @@ const Skills = () => {
     );
 
     // Mobile users don't get skill animations
-    if (isMobile())
+    if (mobile)
       return () => { };
 
     skillContainer.current = document.getElementById("skillContainer");
@@ -61,7 +62,6 @@ const Skills = () => {
     }
   };
 
-  const mobile = isMobile();
   return (
     <section id="skill-container" style={{ position: "relative" }}>
       <div className="skills-container" id="skillContainer">

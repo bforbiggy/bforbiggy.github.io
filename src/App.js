@@ -1,5 +1,4 @@
 import { Suspense, useEffect, useState } from "react";
-import { createBrowserHistory } from "history";
 import { BrowserRouter } from "react-router-dom";
 import SiteRouter from "./router/SiteRouter";
 import Loader from "./core/Loader/Loader";
@@ -7,7 +6,6 @@ import Loader from "./core/Loader/Loader";
 import "./App.scss";
 
 const App = () => {
-  const history = createBrowserHistory();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -31,8 +29,8 @@ const App = () => {
   };
 
   return (
-    <BrowserRouter history={history}>
-      <Suspense fallback={<Loader />}>
+    <BrowserRouter >
+      <Suspense>
         {isLoading ? <Loader /> : <SiteRouter />}
       </Suspense>
     </BrowserRouter>

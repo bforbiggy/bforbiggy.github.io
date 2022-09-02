@@ -6,14 +6,12 @@ import layer3 from "../../assets/layer3.svg";
 import Footer from "../../core/Footer/Footer";
 import bg from "../../assets/sprinkle.svg";
 
-// Homepage exclusive components
 import Intro from "./components/Intro";
 import AboutMe from "./components/AboutMe";
 import Spacer from "../../core/Spacers/Spacer";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 
-// Homepage SCSS
 import "./components/Skills.scss";
 
 const HomePage = () => {

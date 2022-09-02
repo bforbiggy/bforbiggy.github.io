@@ -10,19 +10,20 @@ import {
 import { FaStar } from "react-icons/fa";
 import bg from "../../assets/sprinkle.svg";
 
+const langColors = {
+  "c#": "#af36ff",
+  scss: "#ff36c6",
+  html: "#ff5917",
+  javascript: "#ffdf6b",
+  typescript: "#0096ed",
+  css: "#00fbff",
+  null: "#ff00a2",
+};
+
 const Repositories = () => {
   const [isFetching, setIsFetching] = useState(true);
   const [repos, setRepos] = useState([]);
   const [user, setUser] = useState(null);
-  const langs = {
-    "c#": "#af36ff",
-    scss: "#ff36c6",
-    html: "#ff5917",
-    javascript: "#ffdf6b",
-    typescript: "#0096ed",
-    css: "#00fbff",
-    null: "#ff00a2",
-  };
 
   useEffect(() => {
     (async () => {
@@ -30,18 +31,12 @@ const Repositories = () => {
       let repoData = await fetch("https://api.github.com/users/bforbiggy/repos")
         .then(response => response.json())
         .then(response => response
-          .filter((item) => {
-            return !item.fork;
-          })
-          .sort((a, b) => {
-            return b.stargazers_count - a.stargazers_count;
-          }))
+          .filter((item) => { return !item.fork; })
+          .sort((a, b) => { return b.stargazers_count - a.stargazers_count; }))
       setRepos(repoData);
 
       // Retrieve and set user data
-      let userData = await fetch("https://api.github.com/users/bforbiggy").then(
-        (response) => response.json()
-      );
+      let userData = await fetch("https://api.github.com/users/bforbiggy").then((response) => response.json());
       setUser(userData);
 
       setIsFetching(false);
@@ -50,7 +45,7 @@ const Repositories = () => {
 
   const getLanguageColor = (language) => {
     language = language ?? "null";
-    return langs[language?.toLowerCase()] ?? "#FFF";
+    return langColors[language?.toLowerCase()] ?? "#FFF";
   };
 
   return (
@@ -98,18 +93,16 @@ const Repositories = () => {
                 <div className="name">
                   <RiGitBranchLine /> {data.name}
                 </div>
+
                 <div className="description">{data.description}</div>
                 <div className="info-container">
                   <div className="item">
                     <div className="key">Main Language</div>
                     <div
                       className="value"
-                      style={{
-                        color: getLanguageColor(data.language),
-                        fontSize: "1.1em",
-                      }}
+                      style={{ color: getLanguageColor(data.language) }}
                     >
-                      {data.language ?? "null"}
+                      {data.language ?? "Unknown"}
                     </div>
                   </div>
 
