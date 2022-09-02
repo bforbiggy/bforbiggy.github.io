@@ -1,7 +1,11 @@
 import React from "react";
-import { AiFillGithub } from "react-icons/ai";
-import { FaDiscord } from "react-icons/fa";
+import { AiOutlineMail, AiFillGithub } from "react-icons/ai";
 import layer1 from "../../../assets/layer1.svg";
+
+const buttons = [
+  { text: "Github", icon: <AiFillGithub />, url: "https://github.com/bforbiggy" },
+  { text: "Email", icon: <AiOutlineMail />, url: "mailto: andyhecsp@gmail.com" },
+]
 
 const Intro = () => {
   return (
@@ -11,23 +15,15 @@ const Intro = () => {
       </div>
 
       <div className="buttons-container">
-        <a
-          href="https://discordapp.com/users/187003715302064128"
-          target="_blank" rel="noreferrer"
-          className="basic-button button"
-        >
-          <FaDiscord />
-          Discord
-        </a>
-
-        <a
-          href="https://github.com/bforbiggy"
-          target="_blank" rel="noreferrer"
-          className="basic-button button"
-        >
-          <AiFillGithub />
-          Github
-        </a>
+        {buttons.map((data) =>
+          <a href={data.url}
+            target="_blank" rel="noreferrer"
+            className="basic-button button"
+          >
+            {data.icon}
+            {data.text}
+          </a>
+        )}
       </div>
 
       <div
