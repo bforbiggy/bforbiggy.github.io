@@ -2,13 +2,12 @@ import "../../styles/CoreStyles.scss";
 import "./Links.scss";
 import React from "react";
 import { AiFillGithub, AiOutlineMail, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
-import { SiLeetcode } from "react-icons/si";
-import { FaDiscord } from "react-icons/fa"
+import { SiLeetcode, SiDiscord } from "react-icons/si";
 import { ReactComponent as Flourish } from "../../assets/flourish.svg";
 
 const links = [
 	{ text: "Email", icon: <AiOutlineMail />, url: "mailto:andyhecsp@gmail.com" },
-	{ text: "Discord", icon: <FaDiscord />, url: "https://discordapp.com/users/187003715302064128" },
+	{ text: "Discord", icon: <SiDiscord />, url: "https://discordapp.com/users/187003715302064128" },
 	{ text: "Twitter", icon: <AiOutlineTwitter />, url: "https://twitter.com/bforbiggy" },
 	{ text: "Github", icon: <AiFillGithub />, url: "https://bforbiggy.github.io" },
 	{ text: "LinkedIn", icon: <AiFillLinkedin />, url: "https://www.linkedin.com/in/andy-he-a31771242/" },
