@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkbforbiggy=self.webpackChunkbforbiggy||[]).push([[2],{553:function(e,u,n){n.r(u),n.d(u,{default:function(){return o}});var t=n(152),i=n(791),a=n(578),r=n.p+"static/media/searching.d18e5242522b39d0857d.mp3",s=n(184),c=new Audio(r);c.loop=!0,c.volume=.5;var o=function(){var e=(0,i.useState)(!0),u=(0,t.Z)(e,2),n=u[0],r=u[1],o=function(){c.muted=!n,c.muted?c.pause():c.play(),r(!n)};return(0,s.jsx)("div",{className:"muter",children:n?(0,s.jsx)(a.QK,{onClick:o}):(0,s.jsx)(a.MP2,{onClick:o})})}}}]);
-//# sourceMappingURL=2.6c42700b.chunk.js.map
