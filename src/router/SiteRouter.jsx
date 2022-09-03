@@ -1,10 +1,8 @@
 import React from "react";
 import { Route, Routes, Navigate, Outlet } from "react-router-dom";
 
-import Menu from "../core/Menu/Menu";
+import ButtonBar from "../core/ButtonBar/ButtonBar";
 import HomePage from "../pages/homepage/Homepage";
-
-const Bgm = React.lazy(() => import("../core/Music/BGM"));
 const Repositories = React.lazy(() => import("../pages/repositories/Repositories"));
 const Links = React.lazy(() => import("../pages/links/Links"));
 
@@ -23,8 +21,7 @@ const SiteRouter = () => {
 
 const Main = () => {
   return <>
-    <Menu />
-    <Bgm />
+    <ButtonBar />
     <Outlet />
   </>
 };

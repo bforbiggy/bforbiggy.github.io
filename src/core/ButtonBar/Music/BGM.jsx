@@ -2,13 +2,13 @@ import React, { useState } from "react";
 
 import "./BGM.scss";
 import { TbMusic, TbMusicOff } from "react-icons/tb";
-import backgroundMusic from "../../assets/searching.mp3";
+import backgroundMusic from "../../../assets/searching.mp3";
 
 const bgm = new Audio(backgroundMusic);
 bgm.loop = true;
 bgm.volume = 0.5;
 
-const BGM = () => {
+const BGM = ({ hidden }) => {
 	const [muted, setMuted] = useState(true);
 	const toggleMute = () => {
 		bgm.muted = !muted;
@@ -17,7 +17,7 @@ const BGM = () => {
 	};
 
 	return (
-		<div className="muter">
+		<div className={`muter ${hidden && "hide"}`}>
 			{muted ? <TbMusicOff onClick={toggleMute} /> : <TbMusic onClick={toggleMute} />}
 		</div>
 	);

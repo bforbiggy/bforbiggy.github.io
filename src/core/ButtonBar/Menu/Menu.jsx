@@ -3,10 +3,14 @@ import { HiMenu, HiOutlineX } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
 import "./Menu.scss";
 
-const Menu = () => {
+const Menu = ({ setHidden }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const ToggleMenu = () => setIsExpanded(!isExpanded);
+  const ToggleMenu = () => {
+    setHidden(!isExpanded);
+    setIsExpanded(!isExpanded)
+  };
+
   return (
     <>
       <div className={`menu-expander open ${!isExpanded || "hide"}`} onClick={ToggleMenu}>

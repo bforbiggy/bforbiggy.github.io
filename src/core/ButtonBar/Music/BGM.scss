@@ -2,7 +2,7 @@
 	z-index: 999;
 	position: fixed;
 	top: 15px;
-	right: 15px;
+	left: 45px;
 	font-size: xx-large;
 	cursor: pointer;
 	transition: 200ms ease-in-out;
@@ -12,4 +12,8 @@
 	&:hover {
 		transform: scale(1.4);
 	}
+}
+
+.hide {
+	opacity: 0;
 }

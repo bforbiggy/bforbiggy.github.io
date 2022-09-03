@@ -1,15 +1,19 @@
-import { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import SiteRouter from "./router/SiteRouter";
 import Loader from "./core/Loader/Loader";
 
 import "./App.scss";
 
+const preloadedImages = [
+  "https://github.com/bforbiggy.png",
+];
+
+
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const preloadedImages = ["https://github.com/bforbiggy.png"];
     cacheImages(preloadedImages);
   }, []);
 
