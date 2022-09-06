@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../../core/Footer/Footer";
 import Loader from "../../core/Loader/Loader";
-import "./Repositories.scss";
-import {
-  RiGitBranchLine,
-  RiGitRepositoryFill,
-  RiUserFollowLine,
-} from "react-icons/ri";
+import { RiGitBranchLine, RiGitRepositoryFill, RiUserFollowLine } from "react-icons/ri";
 import { FaStar } from "react-icons/fa";
-import bg from "../../assets/sprinkle.svg";
+import "./Repositories.scss";
 
 const langColors = {
   "c#": "#af36ff",
@@ -49,10 +44,7 @@ const Repositories = () => {
   };
 
   return (
-    <div
-      className="repositories-container"
-      style={{ backgroundImage: `url(${bg})` }}
-    >
+    <div className="repositories-container">
       <main>
         {isFetching ? <Loader local={true} /> : (<>
           <div className="user">

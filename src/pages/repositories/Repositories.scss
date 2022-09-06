@@ -8,8 +8,7 @@
 	flex-direction: column;
 	align-items: center;
 	background-color: theme.$swamp;
-	// God bless this free SVG Background https://bgjar.com
-
+	background-image: url(../../assets/sprinkle.svg);
 	main {
 		min-height: calc(100vh - sizes.$min-footer-height);
 		width: sizes.$reading-width;
