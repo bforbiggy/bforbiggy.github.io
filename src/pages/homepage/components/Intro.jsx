@@ -16,7 +16,7 @@ const Intro = () => {
 
       <div className="buttons-container">
         {buttons.map((data) =>
-          <a href={data.url}
+          <a href={data.url} key={data.text}
             target="_blank" rel="noreferrer"
             className="basic-button button"
           >

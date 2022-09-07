@@ -63,34 +63,32 @@ const Skills = () => {
   };
 
   return (
-    <section id="skill-container" style={{ position: "relative" }}>
-      <div className="skills-container" id="skillContainer">
-        <div className="skills-title" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-          <AiFillFire />Skills
-        </div>
-        <div className="line" />
-
-        <div className="skills-content">
-          {langs.map((lang, index) => {
-            return mobile ?
-              // Mobile users shouldn't click skills
-              <div className="skill" key={index}>
-                <i className={lang.icon} />
-                <div className="blocky">{lang.name}</div>
-                <div className="blocky-connector" />
-              </div> :
-              // Pc users can click skills all they want :O
-              <a
-                href={lang.link} className="skill" key={index}
-                target="_blank" rel="noreferrer">
-                <i className={lang.icon} />
-                <div className="blocky">{lang.name}</div>
-                <div className="blocky-connector" />
-              </a>;
-          })}
-        </div>
+    <div className="skills-container" id="skillContainer">
+      <div className="skills-title" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+        <AiFillFire />Skills
       </div>
-    </section>
+      <div className="line" />
+
+      <div className="skills-content">
+        {langs.map((lang, index) => {
+          return mobile ?
+            // Mobile users shouldn't click skills
+            <div className="skill" key={index}>
+              <i className={lang.icon} />
+              <div className="blocky">{lang.name}</div>
+              <div className="blocky-connector" />
+            </div> :
+            // Pc users can click skills all they want :O
+            <a
+              href={lang.link} className="skill" key={index}
+              target="_blank" rel="noreferrer">
+              <i className={lang.icon} />
+              <div className="blocky">{lang.name}</div>
+              <div className="blocky-connector" />
+            </a>;
+        })}
+      </div>
+    </div>
   );
 };
 
