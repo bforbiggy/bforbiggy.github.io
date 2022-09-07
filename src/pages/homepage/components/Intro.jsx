@@ -1,6 +1,5 @@
 import React from "react";
 import { AiOutlineMail, AiFillGithub } from "react-icons/ai";
-import layer1 from "../../../assets/layer1.svg";
 
 const buttons = [
   { text: "Github", icon: <AiFillGithub />, url: "https://github.com/bforbiggy" },
@@ -25,11 +24,6 @@ const Intro = () => {
           </a>
         )}
       </div>
-
-      <div
-        className="intro-spacer"
-        style={{ backgroundImage: `url(${layer1}` }}
-      />
     </div>
   );
 };

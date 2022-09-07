@@ -1,8 +1,7 @@
 import React from "react";
 import "./Homepage.scss";
 import "../../styles/CoreStyles.scss";
-import layer2 from "../../assets/layer2.svg";
-import layer3 from "../../assets/layer3.svg";
+import { layer1, layer2, layer3 } from "../../assets/svgs"
 import Footer from "../../core/Footer/Footer";
 import bg from "../../assets/sprinkle.svg";
 
@@ -21,6 +20,9 @@ const HomePage = () => {
       style={{ backgroundImage: `url(${bg}` }}
     >
       <Intro />
+      <div className="intro-spacer"
+        style={{ backgroundImage: `url(${layer1}` }} />
+
       <AboutMe />
       <Spacer layerSvg={layer2} />
 
