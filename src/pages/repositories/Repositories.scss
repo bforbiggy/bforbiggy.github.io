@@ -9,6 +9,7 @@
 	align-items: center;
 	background-color: theme.$swamp;
 	background-image: url(../../assets/sprinkle.svg);
+
 	main {
 		min-height: calc(100vh - sizes.$min-footer-height);
 		width: sizes.$reading-width;
@@ -16,34 +17,25 @@
 		flex-direction: row;
 		padding: 2em;
 
-		&::after {
-			content: ".";
-			visibility: hidden;
-		}
-
 		.user {
 			flex: 1;
-			display: flex;
 			flex-direction: column;
+			display: flex;
 			align-items: flex-start;
 			position: relative;
 			background-color: theme.$dark-eerie;
 			height: fit-content;
-			max-width: 300px;
 			padding: 10px;
-			border-radius: 15px;
+			max-width: 300px;
 
 			.avatar {
-				width: 100%;
+				min-width: 200px;
 				min-height: 200px;
 				border-radius: 100%;
-				border: 2px solid;
 				overflow: hidden;
-
-				img {
-					width: 100%;
-					height: 100%;
-				}
+				outline: 2px solid;
+				width: 100%;
+				height: 100%;
 			}
 
 			.user-info {
@@ -117,7 +109,6 @@
 				margin: 1em;
 				height: 200px;
 				padding: 10px;
-				border-radius: 15px;
 				border: 1px solid theme.$dark-eerie;
 				cursor: pointer;
 				transition: 200ms;

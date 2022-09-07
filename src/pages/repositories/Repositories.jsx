@@ -49,16 +49,14 @@ const Repositories = () => {
         {isFetching ? <Loader local={true} /> : (<>
           <div className="user">
             {user && (<>
-              <div className="avatar">
-                <img src="https://github.com/bforbiggy.png" alt="Biggy's pfp" />
-              </div>
+              <img className="avatar" src="https://github.com/bforbiggy.png" alt="Biggy's pfp" />
               <div className="user-info">
                 <div className="name">🎴 {user.login} 🎴</div>
                 <div className="bio">{user.bio}</div>
                 <div className="field">
                   <div className="key">
                     <RiGitRepositoryFill />
-                    Repositories:~ ${" "}
+                    {"Repositories:~ $ "}
                   </div>
                   <div className="value">{user.public_repos}</div>
                 </div>
@@ -113,8 +111,7 @@ const Repositories = () => {
                   </div>
                 </div>
               </a>
-            ))
-            }
+            ))}
           </div>
         </>
         )}
