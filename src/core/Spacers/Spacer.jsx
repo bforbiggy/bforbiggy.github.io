@@ -1,10 +1,10 @@
 import React from "react";
 import "./Spacer.scss";
 
-const Spacer = ({ layerSvg }) => {
+const Spacer = ({ layerSvg, customStyle }) => {
   return (
     <div
-      className="spacer"
+      className={`spacer ${customStyle}`}
       style={{ backgroundImage: `url(${layerSvg}` }}
     />
   );

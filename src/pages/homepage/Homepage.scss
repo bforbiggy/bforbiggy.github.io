@@ -74,17 +74,6 @@ $avatar-size: 300px;
 		}
 	}
 
-	.intro-spacer {
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		aspect-ratio: 960/300;
-		width: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-	}
-
 	section {
 		display: flex;
 		flex-direction: column;

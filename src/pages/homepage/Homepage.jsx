@@ -20,8 +20,7 @@ const HomePage = () => {
       style={{ backgroundImage: `url(${bg}` }}
     >
       <Intro />
-      <div className="intro-spacer"
-        style={{ backgroundImage: `url(${layer1}` }} />
+      <Spacer layerSvg={layer1} customStyle={"intro-anchor"} />
 
       <AboutMe />
       <Spacer layerSvg={layer2} />

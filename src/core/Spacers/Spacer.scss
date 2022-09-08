@@ -5,5 +5,10 @@
 	background-position: center;
 	background-size: cover;
 	z-index: 100;
-	transform: translateY(-2px); // fixes resolution bug
+}
+
+.intro-anchor {
+	position: absolute;
+	left: 0;
+	bottom: 0;
 }
