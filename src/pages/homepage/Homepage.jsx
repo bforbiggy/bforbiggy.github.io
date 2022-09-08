@@ -15,17 +15,17 @@ import Projects from "./components/Projects";
 const HomePage = () => {
   return (
     <div className="homepage-container">
-      {/* <Intro />
-      <Spacer layerSvg={layer1} customStyle={"intro-anchor"} /> */}
+      <Intro />
+      <Spacer layerSvg={layer1} customStyle={"intro-anchor"} />
 
       <MiniBio />
       <Spacer layerSvg={layer2} />
 
       <Skills />
-      {/* <Spacer layerSvg={layer3} />
+      <Spacer layerSvg={layer3} />
 
       <Projects />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 };
