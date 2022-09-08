@@ -2,7 +2,7 @@ import React from "react";
 import { IoSparkles } from "react-icons/io5";
 import { HiSparkles } from "react-icons/hi";
 
-const AboutMe = () => {
+const MiniBio = () => {
   return (
     <section className="maron">
       <div className="content-container">
@@ -64,4 +64,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default MiniBio;

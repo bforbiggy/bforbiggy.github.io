@@ -6,7 +6,9 @@ const Spacer = ({ layerSvg, customStyle }) => {
     <div
       className={`spacer ${customStyle}`}
       style={{ backgroundImage: `url(${layerSvg}` }}
-    />
+    >
+
+    </div>
   );
 };
 
