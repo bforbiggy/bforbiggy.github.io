@@ -4,11 +4,11 @@ import Menu from "./Menu/Menu"
 const Bgm = React.lazy(() => import("./Music/BGM"));
 
 const ButtonBar = () => {
-	const [hidden, setHidden] = React.useState(false);
+	const [menu, setMenu] = React.useState(false);
 
 	return <div>
-		<Menu setHidden={setHidden} />
-		<Bgm hidden={hidden} />
+		<Menu menu={menu} setMenu={setMenu} />
+		<Bgm menu={menu} setMenu={setMenu} />
 	</div>
 };
 

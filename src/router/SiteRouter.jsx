@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes, Navigate, Outlet } from "react-router-dom";
 
-import ButtonBar from "../core/ButtonBar/ButtonBar";
+import ButtonBar from "../core/ButtonBar";
 import HomePage from "../pages/homepage/Homepage";
 const Repositories = React.lazy(() => import("../pages/repositories/Repositories"));
 const Links = React.lazy(() => import("../pages/links/Links"));
