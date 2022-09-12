@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { AiFillFire } from "react-icons/ai";
+import "./Skills.scss";
+
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
