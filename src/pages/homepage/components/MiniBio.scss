@@ -1,30 +1,63 @@
 @use "../../../styles/theme" as theme;
 @use "../../../styles/sizes" as sizes;
 
-.aboutme {
+.content-container {
+	padding: 5em;
 	display: flex;
-	align-items: center;
-	justify-content: center;
 	flex-direction: column;
+	align-items: center;
 	position: relative;
+	background-color: theme.$maron;
 
-	& * {
-		z-index: 10;
+	.sparkle {
+		position: absolute;
+		font-size: 64px;
+		color: theme.$plum;
+		opacity: 0.4;
+		animation-name: floating;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
 	}
 
-	.title {
-		h1 {
-			font-size: 4rem;
+	.aboutme {
+		width: 700px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+
+		& * {
+			z-index: 10;
+		}
+
+		.title {
+			h1 {
+				font-size: 4rem;
+				text-align: center;
+			}
+		}
+
+		.text {
 			text-align: center;
+			font-size: 1.7rem;
+		}
+
+		.k-word {
+			color: theme.$medium-spring-green;
 		}
 	}
 
-	.text {
-		text-align: center;
-		font-size: 1.7rem;
-	}
+	@keyframes floating {
+		0% {
+			transform: translate(0, 0px);
+		}
 
-	.k-word {
-		color: theme.$medium-spring-green;
+		50% {
+			transform: translate(0, 15px);
+		}
+
+		100% {
+			transform: translate(0, 0px);
+		}
 	}
 }
