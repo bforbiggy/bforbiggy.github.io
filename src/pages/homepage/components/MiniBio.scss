@@ -1,0 +1,30 @@
+@use "../../../styles/theme" as theme;
+@use "../../../styles/sizes" as sizes;
+
+.aboutme {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+
+	& * {
+		z-index: 10;
+	}
+
+	.title {
+		h1 {
+			font-size: 4rem;
+			text-align: center;
+		}
+	}
+
+	.text {
+		text-align: center;
+		font-size: 1.7rem;
+	}
+
+	.k-word {
+		color: theme.$medium-spring-green;
+	}
+}

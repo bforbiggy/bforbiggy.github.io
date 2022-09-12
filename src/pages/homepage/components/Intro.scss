@@ -1,0 +1,67 @@
+@use "../../../styles/theme" as theme;
+@use "../../../styles/sizes" as sizes;
+$avatar-size: 300px;
+
+.intro {
+	width: 100%;
+	height: 100vh;
+	min-height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	background: linear-gradient(
+		theme.$swamp,
+		theme.$swamp-lighter,
+		theme.$bittersweet
+	);
+
+	background-size: cover;
+	background-attachment: fixed;
+
+	.avatar {
+		height: $avatar-size;
+		width: $avatar-size;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		animation: avatar-entry 2s 1;
+
+		img {
+			min-width: 100px;
+			width: $avatar-size;
+			height: $avatar-size;
+			border-radius: 100%;
+			border: 2px solid theme.$accent;
+			box-shadow: 0 5px 10px theme.$accent;
+			z-index: 900;
+		}
+	}
+
+	.buttons-container {
+		max-width: 300px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		z-index: 900;
+		animation: avatar-entry 2s 1;
+
+		.button {
+			margin: 1em;
+			font-size: 18px;
+			width: 50%;
+			min-width: 140px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			z-index: 10;
+
+			svg {
+				margin-right: 10px;
+			}
+		}
+	}
+}

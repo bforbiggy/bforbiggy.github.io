@@ -5,7 +5,10 @@ import { layer1, layer2, layer3 } from "../../assets/svgs"
 
 import Spacer from "../../core/Spacers/Spacer";
 import Footer from "../../core/Footer/Footer";
-import { Intro, MiniBio, Skills, Projects } from "./components/Components"
+import Intro from "./components/Intro";
+import MiniBio from "./components/MiniBio";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 
 
 const HomePage = () => {

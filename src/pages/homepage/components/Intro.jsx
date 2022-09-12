@@ -1,5 +1,6 @@
 import React from "react";
 import { AiOutlineMail, AiFillGithub } from "react-icons/ai";
+import "./Intro.scss";
 
 const buttons = [
   { text: "Github", icon: <AiFillGithub />, url: "https://github.com/bforbiggy" },

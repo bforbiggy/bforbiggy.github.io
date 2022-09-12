@@ -1,6 +1,7 @@
 import React from "react";
 import { IoSparkles } from "react-icons/io5";
 import { HiSparkles } from "react-icons/hi";
+import "./MiniBio.scss"
 
 const MiniBio = () => {
   return (
