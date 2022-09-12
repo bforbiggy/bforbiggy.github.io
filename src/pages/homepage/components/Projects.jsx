@@ -58,9 +58,6 @@ const Projects = () => {
             {data.description}
           </div>
         </a>)}
-
-
-
       </div>
     </div>
   );

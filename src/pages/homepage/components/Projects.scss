@@ -1,7 +1,7 @@
 @use "../../../styles/theme" as theme;
 
 .projects {
-	margin-bottom: 4em;
+	padding-bottom: 10rem;
 	width: 90vw;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -29,8 +29,8 @@
 			flex-direction: column;
 			position: relative;
 			width: 300px;
-			height: 250px;
 			margin: 2rem;
+			height: 250px;
 			border-radius: 10px;
 			transition: 200ms ease-in-out;
 			font-size: large;
@@ -47,17 +47,15 @@
 				transform: translate(-50%);
 				width: 100px;
 				height: 100px;
-				z-index: 100;
 
 				display: grid;
-				place-items: center;
 				border-radius: 100%;
+				place-items: center;
 				overflow: hidden;
 				background-color: theme.$swamp;
 
 				img {
 					width: 100px;
-					height: 100px;
 					height: auto;
 				}
 			}
@@ -74,7 +72,6 @@
 				flex: 1;
 				padding: 10px 5px;
 				background-color: theme.$swamp-lighter;
-				z-index: 110;
 				color: theme.$accent;
 
 				h2 {
@@ -88,9 +85,7 @@
 				overflow-y: auto;
 				background-color: theme.$swamp-lighter;
 				text-align: center;
-				padding: 15px;
-				width: 100%;
-				z-index: 110;
+				padding: 10px;
 				border-radius: 0 0 8px 8px;
 			}
 		}
