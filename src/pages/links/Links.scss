@@ -7,12 +7,14 @@
 	align-items: center;
 	flex-direction: column;
 
+	background-repeat: no-repeat;
 	background-size: cover;
 	background-image: url("../../assets/squares.svg");
 
 	.title {
 		margin-top: 4em;
 		margin-bottom: 1%;
+		animation: wipe-enter 1s ease-in;
 
 		p {
 			font-size: 5rem;
@@ -28,28 +30,15 @@
 	.linkedlist {
 		max-width: 666px;
 		width: 100%;
-		height: 100%;
 
 		.link {
 			max-height: 55px;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-
-			margin-top: 1em;
-			margin-bottom: 1em;
-
+			margin: 1em 0 1em 0;
 			border-radius: 30px;
-
-			// BACKUP hover that fills center
-			// border: 3px solid theme.$slate;
-			// background-color: theme.$slate;
-
-			// &:hover {
-			// 	background-position: 0 100%;
-			// 	background: theme.$periwinkle;
-			// 	transition-duration: 0.6s;
-			// }
+			animation: link-entry 1s linear;
 
 			background: linear-gradient(
 				90deg,
@@ -79,5 +68,26 @@
 					"Lucida Sans", Arial, sans-serif;
 			}
 		}
+	}
+}
+
+@keyframes wipe-enter {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes link-entry {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	to {
+		opacity: 1;
 	}
 }
