@@ -8,7 +8,6 @@ $menuWidth: 400px;
 	font-size: xx-large;
 	cursor: pointer;
 	transition: 200ms ease-in-out;
-	backdrop-filter: blur(2px);
 	border-radius: 100%;
 
 	&:hover {
@@ -23,6 +22,7 @@ $menuWidth: 400px;
 	&.close {
 		position: absolute;
 		right: 15px;
+		backdrop-filter: blur(2px);
 	}
 }
 
