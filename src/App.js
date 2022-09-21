@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import SiteRouter from "./router/SiteRouter";
 import Loader from "./core/Loader/Loader";
 
@@ -33,11 +33,11 @@ const App = () => {
   };
 
   return (
-    <BrowserRouter >
+    <HashRouter >
       <Suspense>
         {isLoading ? <Loader /> : <SiteRouter />}
       </Suspense>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

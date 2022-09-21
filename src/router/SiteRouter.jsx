@@ -9,7 +9,7 @@ const Links = React.lazy(() => import("../pages/links/Links"));
 const SiteRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<Main />}>
+      <Route element={<Main />}>
         <Route index element={<HomePage />} />
         <Route path="links/" element={<Links />} />
         <Route path="repositories/" element={<Repositories />} />
