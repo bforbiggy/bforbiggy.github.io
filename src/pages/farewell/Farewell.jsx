@@ -36,7 +36,6 @@ for (let i = 0; i < 150; i++) {
 	snowflakes.push(<Flake className="snowflake" key={`flake${i}`} />);
 }
 
-
 const Farewell = () => {
 	return <>
 		<div id="snow">
@@ -48,6 +47,9 @@ const Farewell = () => {
 			</p>
 			<p>
 				Nulla rutrum mollis convallis. Fusce mattis elit arcu. Donec nec nisi a ante mollis viverra id a felis. Maecenas vel elit viverra, sollicitudin arcu in, eleifend quam. Integer blandit lorem vitae dui ullamcorper, eu gravida tellus posuere. Nulla ligula urna, tincidunt at mattis at, consectetur non felis. Nunc turpis leo, dictum eu sagittis non, vestibulum id ligula. Fusce magna nunc, lobortis vel nisl placerat, porta interdum turpis. Donec ut dui et justo hendrerit rhoncus eget vestibulum nulla. Vivamus hendrerit dolor nec massa maximus dapibus. Nam non lorem ut nibh pellentesque mattis vitae id lorem. Aenean condimentum magna nec egestas euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin aliquam congue fringilla. Fusce at nisi quis lorem tempor sollicitudin id eu tortor. Pellentesque vitae magna pulvinar, bibendum massa in, molestie lorem.
+			</p>
+			<p>
+				Mauris ultrices consequat est. In ultricies sapien pharetra quam vestibulum, quis suscipit lacus imperdiet. In pulvinar ut massa vitae tempor. Praesent dictum, nisi non auctor condimentum, risus ex posuere odio, vitae auctor lectus nisl sit amet dolor. Duis massa dui, semper eget tincidunt congue, ultrices a arcu. Quisque sit amet mattis ex. Praesent dapibus tincidunt lacus vestibulum aliquam. Integer tempus tincidunt dolor in fermentum. Nulla sit amet massa fermentum, sodales lacus non, tincidunt arcu. Mauris vestibulum efficitur purus eu fermentum. Cras nec libero tristique, condimentum sapien sed, gravida tortor. Suspendisse maximus in elit at lobortis.
 			</p>
 		</div>
 	</>
