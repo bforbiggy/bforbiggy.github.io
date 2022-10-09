@@ -29,7 +29,7 @@ const Menu = ({ menu, setMenu }) => {
 
           <div className="menu-items">
             {pages.map(data =>
-              <NavLink to={data.link} className="item" onClick={ToggleMenu}>
+              <NavLink to={data.link} className="item" onClick={ToggleMenu} key={data.text}>
                 {data.text}
               </NavLink>
             )}
