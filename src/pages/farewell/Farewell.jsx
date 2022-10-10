@@ -10,18 +10,16 @@ function random_range(min, max) {
 }
 
 const snowflakes = []
-for (let i = 0; i < 150; i++) {
+for (let i = 0; i < 200; i++) {
 	let random_x = Math.random() * 100; // vw
 	let random_offset = random_range(-100, 100) * 0.1; // vw;
 	let random_yoyo_time = random_range(3, 8) / 10;
-	let random_yoyo_y = random_yoyo_time * 100; // vh
 	let random_scale = Math.random();
-	let fall_duration = random_range(10, 30) * 1; // s
 
 	// Ignore error highlights, this compiles
 	const flakeAnimation = keyframes`
 			${random_yoyo_time * 100}% {
-      	transform: translate(${random_x + random_offset}vw, ${random_yoyo_y}vh) scale(${random_scale});
+      	transform: translate(${random_x + random_offset}vw, ${random_yoyo_time * 100}vh) scale(${random_scale});
       }
       to {
         transform: translate(${random_x + (random_offset / 2)}vw, 100vh) scale(${random_scale});
@@ -31,14 +29,14 @@ for (let i = 0; i < 150; i++) {
 			filter:
 					opacity: ${Math.random()};
 					transform: translate(${random_x}vw, -10px) scale(${random_scale});
-					animation: ${flakeAnimation} ${fall_duration}s ${-random_int(30)}s linear infinite;
+					animation: ${flakeAnimation} ${random_range(10, 30)}s ${-random_int(30)}s linear infinite;
 		`;
 	snowflakes.push(<Flake className="snowflake" key={`flake${i}`} />);
 }
 
 const Farewell = () => {
-	return <>
-		<div id="snow">
+	return <div className="farewell">
+		<div className="snow">
 			{snowflakes}
 		</div>
 		<div className="boring-essay">
@@ -52,7 +50,7 @@ const Farewell = () => {
 				Mauris ultrices consequat est. In ultricies sapien pharetra quam vestibulum, quis suscipit lacus imperdiet. In pulvinar ut massa vitae tempor. Praesent dictum, nisi non auctor condimentum, risus ex posuere odio, vitae auctor lectus nisl sit amet dolor. Duis massa dui, semper eget tincidunt congue, ultrices a arcu. Quisque sit amet mattis ex. Praesent dapibus tincidunt lacus vestibulum aliquam. Integer tempus tincidunt dolor in fermentum. Nulla sit amet massa fermentum, sodales lacus non, tincidunt arcu. Mauris vestibulum efficitur purus eu fermentum. Cras nec libero tristique, condimentum sapien sed, gravida tortor. Suspendisse maximus in elit at lobortis.
 			</p>
 		</div>
-	</>
+	</div>
 };
 
 export default Farewell;
