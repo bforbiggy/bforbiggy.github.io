@@ -1,5 +1,5 @@
 import React from "react";
-import "./Farewell.scss";
+import "./AboutMe.scss";
 import styled, { keyframes } from "styled-components";
 
 function random_int(value = 100) {
