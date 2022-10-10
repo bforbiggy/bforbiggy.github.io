@@ -5,7 +5,7 @@ import ButtonBar from "../core/ButtonBar";
 import HomePage from "../pages/homepage/Homepage";
 const Repositories = React.lazy(() => import("../pages/repositories/Repositories"));
 const Links = React.lazy(() => import("../pages/links/Links"));
-const Farewell = React.lazy(() => import("../pages/farewell/Farewell"));
+const AboutMe = React.lazy(() => import("../pages/aboutme/AboutMe"));
 
 const SiteRouter = () => {
   return (
@@ -14,7 +14,7 @@ const SiteRouter = () => {
         <Route index element={<HomePage />} />
         <Route path="links/" element={<Links />} />
         <Route path="repositories/" element={<Repositories />} />
-        <Route path="farewell/" element={<Farewell />} />
+        <Route path="aboutme/" element={<AboutMe />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>
