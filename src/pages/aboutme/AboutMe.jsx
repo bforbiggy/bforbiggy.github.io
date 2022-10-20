@@ -5,19 +5,14 @@ import styled, { keyframes } from "styled-components";
 
 const snowflakes = [];
 for (let i = 0; i < 200; i++) {
-	let random_x = randomInteger(0, 100); // vw
-	let offset = randomInteger(-10, 10); // vw;
+	let random_x = randomInteger(0, 100);
+	let offset = randomInteger(-10, 10);
 	let yoyo_time = randomInteger(30, 80);
 	let random_scale = Math.random();
 
-	// Ignore error highlights, this compiles
 	const flakeAnimation = keyframes`
-		${yoyo_time}% {
-      transform: translate(${random_x + offset}vw, ${yoyo_time}vh) scale(${random_scale});
-    }
-    to {
-      transform: translate(${random_x + offset / 2}vw, 100vh) scale(${random_scale});
-    }
+		${yoyo_time}% { transform: translate(${random_x + offset}vw, ${yoyo_time}vh) scale(${random_scale});}
+    to { transform: translate(${random_x + offset / 2}vw, 100vh) scale(${random_scale});}
 	`;
 
 	let Flake = styled.div`
@@ -34,8 +29,8 @@ const AboutMe = () => {
 		<div className="aboutme">
 			<div className="snow">{snowflakes}</div>
 			<div className="boring-essay">
-				<p>waga baga bobo?</p>
-				<a href="https://www.youtube.com/watch?v=RuIXOBF0eyQ">Song for two</a>
+				<p>This is a standin for the about me.</p>
+				<a href="https://www.youtube.com/watch?v=RuIXOBF0eyQ">For You</a>
 			</div>
 		</div>
 	);
