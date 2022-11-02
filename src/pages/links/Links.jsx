@@ -9,7 +9,7 @@ const links = [
 	{ text: "Email", icon: <AiOutlineMail />, url: "mailto:andyhecsp@gmail.com" },
 	{ text: "Discord", icon: <SiDiscord />, url: "https://discordapp.com/users/187003715302064128" },
 	{ text: "Twitter", icon: <AiOutlineTwitter />, url: "https://twitter.com/bforbiggy" },
-	{ text: "Github", icon: <AiFillGithub />, url: "https://bforbiggy.github.io" },
+	{ text: "Github", icon: <AiFillGithub />, url: "https://github.com/bforbiggy" },
 	{ text: "LinkedIn", icon: <AiFillLinkedin />, url: "https://www.linkedin.com/in/andy-he-a31771242/" },
 	{ text: "LeetCode", icon: <SiLeetcode />, url: "https://leetcode.com/bforbiggy/" },
 ];
