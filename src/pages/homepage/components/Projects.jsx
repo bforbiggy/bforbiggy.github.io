@@ -12,25 +12,31 @@ const projects = [
     icon: "https://cdn.discordapp.com/avatars/974394845164625970/c9a788bc0af08f7bd101fd6c05472e53.png",
     link: "https://github.com/bforbiggy/DonetBot",
     name: "Donet Bot",
-    description: "A discord bot with miscellaneous features for fun and utility. Uses micro service architecture to perform image modifications and provide ai chat functionality."
+    description: "A discord bot with miscellaneous features for fun and utility. Uses as-a-service micro architecture to include complex features such as image modifications and ai chatting."
   },
   {
     icon: "https://t3.ftcdn.net/jpg/04/21/36/18/360_F_421361860_zjgcITz10qk8pRQMxdDF4erMml6QUUYK.jpg",
     link: "https://github.com/bforbiggy/image-filter-tools",
     name: "Image Filter Tools",
-    description: "A libray used for performing image operations such as edge detection, denoising, sharpening and my favorite: ascii conversion. Available as a dll and as a command line executable."
+    description: "An image processing library for operations such as edge detection, denoising, sharpening and my personal favorite: ascii conversion. Available as a dll and as a command line executable."
   },
   {
     icon: "https://i.imgur.com/AI5PNdd.png",
     link: "https://github.com/bforbiggy/chatting-site",
     name: "Chatting Site(Front End)",
-    description: "Larger project site that helped me familiarize myself with React and it's interactions with html/css."
+    description: "Project site that required understanding APIs and gateways, as well as expanding a familiary with REACT."
   },
   {
     icon: "https://upload.wikimedia.org/wikipedia/en/5/59/Padlock.svg",
     link: "https://github.com/bforbiggy/chatting-backend",
     name: "Chatting Site (Back End)",
-    description: "Larger project backend that gave me the chance to learn about REST, mongoDB and basic password security. \n(Privated for security.)"
+    description: "Chatting backend that utilizes REST and mongoDB to study frameworks. Incorporated cybersecurity concerns. \n(Privated for security.)"
+  },
+  {
+    icon: "https://shmector.com/_ph/2/336231771.png",
+    link: "https://github.com/bforbiggy/big-shell",
+    name: "Big Shell (bish)",
+    description: "Shell built entirely in C from scratch for blazing fast performance.",
   },
 ]
 
