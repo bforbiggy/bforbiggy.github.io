@@ -2,27 +2,19 @@
 
 $menuWidth: 400px;
 
-.menu-button {
+.close-menu {
 	z-index: 900;
 	top: 15px;
+	position: absolute;
+	right: 15px;
+	backdrop-filter: blur(2px);
 	font-size: xx-large;
-	cursor: pointer;
-	transition: 200ms ease-in-out;
 	border-radius: 100%;
 
+	cursor: pointer;
 	&:hover {
+		transition: 200ms ease-in-out;
 		transform: scale(1.4);
-	}
-
-	&.open {
-		position: fixed;
-		left: 15px;
-	}
-
-	&.close {
-		position: absolute;
-		right: 15px;
-		backdrop-filter: blur(2px);
 	}
 }
 
@@ -69,27 +61,27 @@ $menuWidth: 400px;
 				border-left: 4px solid theme.$maron;
 			}
 
+			&:hover {
+				color: white;
+				border-left: 1px solid transparent;
+			}
+
 			&.active {
 				background-image: linear-gradient(
 					to right,
 					theme.$maron,
 					transparent 90%
 				);
-
-				&:hover {
-					color: white;
-					border-left: 1px solid transparent;
-				}
 			}
 		}
 	}
 }
 
-.hide {
+.hidden {
 	visibility: hidden;
 }
 
-.menu-hidden {
+.hide-menu {
 	transform: translateX(-($menuWidth));
 }
 

@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes, Navigate, Outlet } from "react-router-dom";
 
 import ButtonBar from "../core/ButtonBar";
+import Menu from "../core/Menu/Menu";
 import HomePage from "../pages/homepage/Homepage";
 const Repositories = React.lazy(() => import("../pages/repositories/Repositories"));
 const Links = React.lazy(() => import("../pages/links/Links"));
@@ -22,8 +23,10 @@ const SiteRouter = () => {
 };
 
 const Main = () => {
+  const [menu, setMenu] = React.useState(false);
   return <>
-    <ButtonBar />
+    <ButtonBar menu={menu} setMenu={setMenu} />
+    <Menu menu={menu} setMenu={setMenu} />
     <Outlet />
   </>
 };

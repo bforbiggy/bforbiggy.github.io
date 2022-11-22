@@ -1,13 +1,11 @@
 import React from "react"
 
-import Menu from "./Menu/Menu"
+import MenuButton from "./Menu/MenuButton"
 const Bgm = React.lazy(() => import("./Music/BGM"));
 
-const ButtonBar = () => {
-	const [menu, setMenu] = React.useState(false);
-
+const ButtonBar = ({ menu, setMenu }) => {
 	return <div>
-		<Menu menu={menu} setMenu={setMenu} />
+		<MenuButton menu={menu} setMenu={setMenu} />
 		<Bgm menu={menu} setMenu={setMenu} />
 	</div>
 };
