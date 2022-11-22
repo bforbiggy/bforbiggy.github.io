@@ -24,16 +24,20 @@ for (let i = 0; i < 200; i++) {
 	snowflakes.push(<Flake className="snowflake" key={`flake${i}`} />);
 }
 
+
 const AboutMe = () => {
 	return (
 		<div className="aboutme">
 			<div className="snow">{snowflakes}</div>
 			<div className="boring-essay">
-				<p>This is a standin for the about me.</p>
-				<a href="https://www.youtube.com/watch?v=RuIXOBF0eyQ">For You</a>
+				Hello.
+				<a href="https://www.youtube.com/watch?v=RuIXOBF0eyQ">Good morning,</a>
+				<a href="https://www.youtube.com/watch?v=Pi9J4epTWGM">good evening,</a>
+				<a href="https://www.youtube.com/watch?v=B3vsRXOSBqc">and goodbye.</a>
 			</div>
 		</div>
 	);
 };
 
+// I'll never forget you three: Alice, Frank, Rachael
 export default AboutMe;
