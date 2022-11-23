@@ -6,6 +6,7 @@ import "./Menu.scss";
 const pages = [
   { text: "Home", link: "/" },
   { text: "Links", link: "/links" },
+  { text: "About Me", link: "/aboutme" },
   { text: "Repositories", link: "/repositories" }
 ]
 

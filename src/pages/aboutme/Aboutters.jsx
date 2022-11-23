@@ -1,7 +1,7 @@
 
 const Aboutters = [
-	"Not really sure what to write here",
-	"Here too",
+	"Work in progress",
+	"Enjoy some songs in the meantime!",
 ]
 
 export default Aboutters;
