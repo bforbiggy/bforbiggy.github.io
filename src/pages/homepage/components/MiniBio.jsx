@@ -46,7 +46,7 @@ const MiniBio = () => {
       )}
 
       { /** Personal information */}
-      <div className="aboutme">
+      <div className="minibio">
         <div className="title">
           <h1>About Me</h1>
         </div>
