@@ -25,7 +25,7 @@ const Links = () => {
 
 			<div className="linkedlist">
 				{links.map((link, index) => (
-					<a href={link.url} className="link" style={{ animation: `link-entry ${0.8 + 0.05 * index}s linear` }}>
+					<a href={link.url} className="link" style={{ animation: `link-entry ${0.8 + 0.05 * index}s linear` }} key={link.text}>
 						{link.icon}
 						<p>{link.text}</p>
 					</a>

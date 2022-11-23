@@ -52,6 +52,7 @@ const Projects = () => {
           href={data.link}
           target="_blank" rel="noreferrer"
           className="item"
+          key={data.name}
         >
           <div className="icon">
             <img src={data.icon} alt="" loading="lazy" />
