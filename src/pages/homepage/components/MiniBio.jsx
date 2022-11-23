@@ -53,14 +53,14 @@ const MiniBio = () => {
         <div className="text">
           <p>
             Hello! On the internet I appear under the name
-            <span className="k-word"> biggy</span>, as a
-            <span className="k-word"> 20</span> years old
-            Fullstack developer <span className="k-word">&&</span> software
+            <span className="highlighter"> biggy</span>, as a
+            <span className="highlighter"> 20</span> years old
+            Fullstack developer <span className="highlighter">&&</span> software
             engineering student.
           </p>
           <p>
             I'm incredibly passionate about coding and
-            my personal favorite technology is <span className="k-word"> .NET</span>,
+            my personal favorite technology is <span className="highlighter"> .NET</span>,
             although I love learning about new languages and technologies!
           </p>
         </div>
