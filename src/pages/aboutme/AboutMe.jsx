@@ -1,6 +1,7 @@
 import randomInteger from "random-int";
 import React from "react";
 import "./AboutMe.scss";
+import Aboutters from "./Aboutters";
 import styled, { keyframes } from "styled-components";
 
 const snowflakes = [];
@@ -24,16 +25,15 @@ for (let i = 0; i < 200; i++) {
 	snowflakes.push(<Flake className="snowflake" key={`flake${i}`} />);
 }
 
-
 const AboutMe = () => {
 	return (
 		<div className="aboutme">
 			<div className="snow">{snowflakes}</div>
 			<div className="boring-essay">
-				Hello.
-				<a href="https://www.youtube.com/watch?v=RuIXOBF0eyQ">Good morning,</a>
-				<a href="https://www.youtube.com/watch?v=Pi9J4epTWGM">good evening,</a>
-				<a href="https://www.youtube.com/watch?v=B3vsRXOSBqc">and goodbye.</a>
+				{Aboutters.map(paragraph => <p>{paragraph}</p>)}
+				<a href="https://www.youtube.com/watch?v=RuIXOBF0eyQ">Chalili - La Vanille</a>
+				<a href="https://www.youtube.com/watch?v=Pi9J4epTWGM">Rex Orange County - Pluto Projector</a>
+				<a href="https://www.youtube.com/watch?v=B3vsRXOSBqc">Eve - This World To You</a>
 			</div>
 		</div>
 	);
