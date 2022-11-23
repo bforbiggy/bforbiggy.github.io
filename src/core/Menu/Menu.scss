@@ -29,12 +29,6 @@ $menuWidth: 400px;
 	backdrop-filter: blur(2px);
 	transition: 450ms ease-in-out;
 
-	.menu-container {
-		position: relative;
-		width: 100%;
-		height: 100%;
-	}
-
 	.menu-items {
 		display: flex;
 		flex-direction: column;
