@@ -32,8 +32,8 @@ const AboutMe = () => {
 			<div className="boring-essay">
 				{Aboutters.map(paragraph => <p>{paragraph}</p>)}
 				<a href="https://www.youtube.com/watch?v=RuIXOBF0eyQ">Chalili - La Vanille</a>
-				<a href="https://www.youtube.com/watch?v=Pi9J4epTWGM">Rex Orange County - Pluto Projector</a>
 				<a href="https://www.youtube.com/watch?v=B3vsRXOSBqc">Eve - This World To You</a>
+				<a href="https://www.youtube.com/watch?v=Pi9J4epTWGM">Rex Orange County - Pluto Projector</a>
 			</div>
 		</div>
 	);

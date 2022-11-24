@@ -15,27 +15,29 @@ const langColors = {
   null: "#ff00a2",
 };
 
+async function retrieveUserData(setRepos, setUser) {
+  // Retrieve and set repository data (after filters/sorts)
+  let repoData = await fetch("https://api.github.com/users/bforbiggy/repos")
+    .then(response => response.json())
+    .then(response => response
+      .filter(item => !item.fork)
+      .sort((a, b) => b.stargazers_count - a.stargazers_count || b.size - a.size))
+  setRepos(repoData);
+
+  // Retrieve and set user data
+  let userData = await fetch("https://api.github.com/users/bforbiggy").then((response) => response.json());
+  setUser(userData);
+
+}
+
 const Repositories = () => {
   const [isFetching, setIsFetching] = useState(true);
   const [repos, setRepos] = useState([]);
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    (async () => {
-      // Retrieve and set repository data (after filters/sorts)
-      let repoData = await fetch("https://api.github.com/users/bforbiggy/repos")
-        .then(response => response.json())
-        .then(response => response
-          .filter((item) => { return !item.fork; })
-          .sort((a, b) => { return b.stargazers_count - a.stargazers_count; }))
-      setRepos(repoData);
-
-      // Retrieve and set user data
-      let userData = await fetch("https://api.github.com/users/bforbiggy").then((response) => response.json());
-      setUser(userData);
-
-      setIsFetching(false);
-    })();
+    retrieveUserData(setRepos, setUser)
+    setIsFetching(false);
   }, []);
 
   const getLanguageColor = (language) => {
