@@ -1,11 +1,13 @@
-import randomInteger from "random-int";
+import { isMobile, randomInteger } from "../../core/Util";
 import React from "react";
 import "./AboutMe.scss";
 import Aboutters from "./Aboutters";
 import styled, { keyframes } from "styled-components";
 
+let flakeCount = isMobile() ? 50 : 200;
+
 const snowflakes = [];
-for (let i = 0; i < 200; i++) {
+for (let i = 0; i < flakeCount; i++) {
 	let random_x = randomInteger(0, 100);
 	let offset = randomInteger(-10, 10);
 	let yoyo_time = randomInteger(30, 80);
@@ -28,14 +30,14 @@ for (let i = 0; i < 200; i++) {
 const AboutMe = () => {
 	return (
 		<div className="aboutme">
-			<div className="snow">{snowflakes}</div>
+			<div className="snow" id="snow">{snowflakes}</div>
 			<div className="boring-essay">
-				{Aboutters.map(paragraph => <p>{paragraph}</p>)}
+				{Aboutters.map((paragraph, index) => <p key={`p${index}`} > {paragraph}</p>)}
 				<a href="https://www.youtube.com/watch?v=RuIXOBF0eyQ">Chalili - La Vanille</a>
 				<a href="https://www.youtube.com/watch?v=B3vsRXOSBqc">Eve - This World To You</a>
 				<a href="https://www.youtube.com/watch?v=Pi9J4epTWGM">Rex Orange County - Pluto Projector</a>
 			</div>
-		</div>
+		</div >
 	);
 };
 
