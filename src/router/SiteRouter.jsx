@@ -6,7 +6,7 @@ import Menu from "../core/Menu/Menu";
 import HomePage from "../pages/homepage/Homepage";
 const Repositories = React.lazy(() => import("../pages/repositories/Repositories"));
 const Links = React.lazy(() => import("../pages/links/Links"));
-const AboutMe = React.lazy(() => import("../pages/aboutme/Aboutme"));
+const AboutMe = React.lazy(() => import("../pages/aboutme/AboutMe"));
 
 const SiteRouter = () => {
   return (
