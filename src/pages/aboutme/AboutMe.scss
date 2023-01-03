@@ -4,7 +4,11 @@
 	width: 100vw;
 	min-height: 100vh;
 	height: fit-content;
-	background: linear-gradient(theme.$port 30%, theme.$bittersweet);
+	background: radial-gradient(
+		ellipse at top,
+		theme.$bittersweet 40%,
+		transparent
+	);
 	background-size: cover;
 
 	.boring-essay {

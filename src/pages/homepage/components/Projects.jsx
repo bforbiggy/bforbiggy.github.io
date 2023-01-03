@@ -16,7 +16,7 @@ const projects = [
   },
   {
     icon: "https://t3.ftcdn.net/jpg/04/21/36/18/360_F_421361860_zjgcITz10qk8pRQMxdDF4erMml6QUUYK.jpg",
-    link: "https://github.com/bforbiggy/image-filter-tools",
+    link: "https://i.imgur.com/gbZFbD6.jpg",
     name: "Image Filter Tools",
     description: "An image processing library for operations such as edge detection, denoising, sharpening and my personal favorite: ascii conversion. Available as a dll and as a command line executable."
   },
