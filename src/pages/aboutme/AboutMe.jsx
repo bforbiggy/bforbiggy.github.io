@@ -1,8 +1,10 @@
 import { isMobile, randomInteger } from "../../core/Util";
 import React, { useEffect, useState } from "react";
+import styled, { keyframes } from "styled-components";
+
+import { networklines } from "../../assets/svgs";
 import "./AboutMe.scss";
 import Aboutters from "./Aboutters";
-import styled, { keyframes } from "styled-components";
 
 let flakeCount = isMobile() ? 50 : 200;
 
@@ -37,7 +39,7 @@ const AboutMe = () => {
 	return (
 		<div className="aboutme">
 			<div className="snow" id="snow">{flakes}</div>
-			<div className="boring-essay">
+			<div className="boring-essay" style={{ backgroundImage: `url(${networklines})` }}>
 				{Aboutters.map((paragraph, index) => <p key={`p${index}`} > {paragraph}</p>)}
 				<a href="https://www.youtube.com/watch?v=RuIXOBF0eyQ">Chalili - La Vanille</a>
 				<a href="https://www.youtube.com/watch?v=B3vsRXOSBqc">Eve - This World To You</a>
