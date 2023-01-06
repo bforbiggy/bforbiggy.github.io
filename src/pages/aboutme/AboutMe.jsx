@@ -4,7 +4,6 @@ import styled, { keyframes } from "styled-components";
 
 import { networklines } from "../../assets/svgs";
 import "./AboutMe.scss";
-import Aboutters from "./Aboutters";
 
 let flakeCount = isMobile() ? 50 : 200;
 
@@ -40,7 +39,6 @@ const AboutMe = () => {
 		<div className="aboutme">
 			<div className="snow" id="snow">{flakes}</div>
 			<div className="boring-essay" style={{ backgroundImage: `url(${networklines})` }}>
-				{Aboutters.map((paragraph, index) => <p key={`p${paragraph.substring(0, 16)}`} > {paragraph}</p>)}
 				<a href="https://www.youtube.com/watch?v=RuIXOBF0eyQ">Chalili - La Vanille</a>
 				<a href="https://www.youtube.com/watch?v=B3vsRXOSBqc">Eve - This World To You</a>
 				<a href="https://www.youtube.com/watch?v=Pi9J4epTWGM">Rex Orange County - Pluto Projector</a>
