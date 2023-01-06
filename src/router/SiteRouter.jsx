@@ -16,6 +16,7 @@ const SiteRouter = () => {
         <Route path="links/" element={<Links />} />
         <Route path="repositories/" element={<Repositories />} />
         <Route path="aboutme/" element={<AboutMe />} />
+        <Route path="card/" element={<AboutMe />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>
