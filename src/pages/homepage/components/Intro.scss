@@ -44,20 +44,6 @@ $avatar-size: 300px;
 		justify-content: space-around;
 		z-index: 900;
 		animation: avatar-entry 2s 1;
-
-		.button {
-			margin: 1em;
-			font-size: 18px;
-			width: 50%;
-			min-width: 140px;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-
-			svg {
-				margin-right: 10px;
-			}
-		}
 	}
 }
 
@@ -79,5 +65,40 @@ $avatar-size: 300px;
 
 	to {
 		opacity: 1;
+	}
+}
+
+.button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 50%;
+	min-width: 140px;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 1em;
+
+	font-weight: bold;
+	font-size: 18px;
+	letter-spacing: 1px;
+	color: white;
+	background-size: 100% 200%;
+	background-image: linear-gradient(
+		to bottom,
+		theme.$eerie-black 50%,
+		theme.$accent 50%
+	);
+
+	transition: background-position 0.2s ease-in-out, color 0.2s ease-in-out,
+		transform 0.2s ease-in-out;
+
+	&:hover {
+		background-position: 0 100%;
+		color: #fff;
+		border-color: theme.$pictorial-carmine;
+	}
+
+	svg {
+		margin-right: 10px;
 	}
 }

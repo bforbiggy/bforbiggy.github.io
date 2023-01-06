@@ -1,12 +1,5 @@
 @use "../styles/theme" as theme;
 
-// animated
-$linear-gradient-bottom-top: linear-gradient(
-  to bottom,
-  theme.$thirdPlan 50%,
-  theme.$accent 50%
-) !important;
-
 // basic transition
 $fast: 200ms ease-out;
 $default: 300ms ease-out;
