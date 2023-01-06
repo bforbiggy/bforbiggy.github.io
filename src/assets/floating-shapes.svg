@@ -41,11 +41,7 @@
 		<mask id="SvgjsMask1018">
 			<rect width="1920" height="1080" fill="#ffffff"></rect>
 		</mask>
-		<linearGradient x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse"
-			id="SvgjsLinearGradient1019">
-			<stop stop-color="rgba(218, 63, 103, 1)" offset="0"></stop>
-			<stop stop-color="rgba(5, 25, 41, 1)" offset="1"></stop>
-		</linearGradient>
+
 		<style>
 			@keyframes float1 {
 			0%{transform: translate(0, 0)}

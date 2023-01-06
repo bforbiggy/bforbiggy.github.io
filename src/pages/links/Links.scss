@@ -9,7 +9,8 @@
 
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url("../../assets/floating-shapes.svg");
+	background-image: url("../../assets/floating-shapes.svg"),
+		linear-gradient(theme.$background, theme.$accent);
 
 	.title {
 		margin-top: 4em;
