@@ -38,10 +38,16 @@ const AboutMe = () => {
 	return (
 		<div className="aboutme">
 			<div className="snow" id="snow">{flakes}</div>
-			<div className="boring-essay" style={{ backgroundImage: `url(${networklines})` }}>
-				<a href="https://www.youtube.com/watch?v=RuIXOBF0eyQ">Chalili - La Vanille</a>
-				<a href="https://www.youtube.com/watch?v=B3vsRXOSBqc">Eve - This World To You</a>
-				<a href="https://www.youtube.com/watch?v=Pi9J4epTWGM">Rex Orange County - Pluto Projector</a>
+			<div className="card" >
+				<div className="cardcontent" style={{ backgroundImage: `url(${networklines})` }}>
+					<h2>Andy He</h2>
+					<p>Lorem ipsum dolor consequat et amet magna consectetur aliquam et adipiscing dui turpis etiam sed nisl magna erat id vehicula ultrices.</p>
+				</div>
+				<div className="links">
+					<a href="https://www.youtube.com/watch?v=RuIXOBF0eyQ">Chalili - La Vanille</a>
+					<a href="https://www.youtube.com/watch?v=B3vsRXOSBqc">Eve - This World To You</a>
+					<a href="https://www.youtube.com/watch?v=Pi9J4epTWGM">Rex Orange County - Pluto Projector</a>
+				</div>
 			</div>
 		</div >
 	);
