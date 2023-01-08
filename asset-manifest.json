@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.faab41d3.css",
-    "main.js": "/static/js/main.d8a08cf4.js",
+    "main.js": "/static/js/main.4b33ccda.js",
     "static/css/77.f6f697b1.chunk.css": "/static/css/77.f6f697b1.chunk.css",
     "static/js/77.3dbf9b5b.chunk.js": "/static/js/77.3dbf9b5b.chunk.js",
     "static/css/986.9e764f93.chunk.css": "/static/css/986.9e764f93.chunk.css",
     "static/js/986.e1429a78.chunk.js": "/static/js/986.e1429a78.chunk.js",
-    "static/css/297.b8fc17fc.chunk.css": "/static/css/297.b8fc17fc.chunk.css",
+    "static/css/297.a1ead288.chunk.css": "/static/css/297.a1ead288.chunk.css",
     "static/js/297.95cf86d3.chunk.js": "/static/js/297.95cf86d3.chunk.js",
     "static/css/2.f19faaf5.chunk.css": "/static/css/2.f19faaf5.chunk.css",
     "static/js/2.5440ba93.chunk.js": "/static/js/2.5440ba93.chunk.js",
@@ -27,12 +27,12 @@
     "static/media/layer2.svg": "/static/media/layer2.f7fa859696bd48bd53e3585141406acc.svg",
     "static/media/layer4.svg": "/static/media/layer4.4dea0179977854a7484a1a826a74da41.svg",
     "main.faab41d3.css.map": "/static/css/main.faab41d3.css.map",
-    "main.d8a08cf4.js.map": "/static/js/main.d8a08cf4.js.map",
+    "main.4b33ccda.js.map": "/static/js/main.4b33ccda.js.map",
     "77.f6f697b1.chunk.css.map": "/static/css/77.f6f697b1.chunk.css.map",
     "77.3dbf9b5b.chunk.js.map": "/static/js/77.3dbf9b5b.chunk.js.map",
     "986.9e764f93.chunk.css.map": "/static/css/986.9e764f93.chunk.css.map",
     "986.e1429a78.chunk.js.map": "/static/js/986.e1429a78.chunk.js.map",
-    "297.b8fc17fc.chunk.css.map": "/static/css/297.b8fc17fc.chunk.css.map",
+    "297.a1ead288.chunk.css.map": "/static/css/297.a1ead288.chunk.css.map",
     "297.95cf86d3.chunk.js.map": "/static/js/297.95cf86d3.chunk.js.map",
     "2.f19faaf5.chunk.css.map": "/static/css/2.f19faaf5.chunk.css.map",
     "2.5440ba93.chunk.js.map": "/static/js/2.5440ba93.chunk.js.map",
@@ -44,6 +44,6 @@
   },
   "entrypoints": [
     "static/css/main.faab41d3.css",
-    "static/js/main.d8a08cf4.js"
+    "static/js/main.4b33ccda.js"
   ]
 }
