@@ -41,7 +41,7 @@ const AboutMe = () => {
 			<div className="card" >
 				<div className="cardcontent" style={{ backgroundImage: `url(${networklines})` }}>
 					<h2>Andy He</h2>
-					<p>Lorem ipsum dolor consequat et amet magna consectetur aliquam et adipiscing dui turpis etiam sed nisl magna erat id vehicula ultrices.</p>
+					<p>I've a software engineer with 5 years of experience who loves to code new things all the time! My life started in the one and only New York City which is good, because some of the best ramen shops are in NYC! In my spare time I enjoy my hobbies like working out or boxing for exercise, coding for my brain and playing the piano for my creative side. </p>
 				</div>
 				<div className="links">
 					<a href="https://www.youtube.com/watch?v=RuIXOBF0eyQ">Chalili - La Vanille</a>
