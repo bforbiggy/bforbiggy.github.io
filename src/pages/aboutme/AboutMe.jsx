@@ -44,9 +44,9 @@ const AboutMe = () => {
 					<p>I've a software engineer with 5 years of experience who loves to code new things all the time! My life started in the one and only New York City which is good, because some of the best ramen shops are in NYC! In my spare time I enjoy my hobbies like working out or boxing for exercise, coding for my brain and playing the piano for my creative side. </p>
 				</div>
 				<div className="links">
-					<a href="https://www.youtube.com/watch?v=RuIXOBF0eyQ">Chalili - La Vanille</a>
-					<a href="https://www.youtube.com/watch?v=B3vsRXOSBqc">Eve - This World To You</a>
-					<a href="https://www.youtube.com/watch?v=Pi9J4epTWGM">Rex Orange County - Pluto Projector</a>
+					<a href="https://youtu.be/yk9X4WceY64">Rat Boy & IBDY - Who's Ready For Tomorrow</a>
+					<a href="https://youtu.be/LyiGmDOznWM">La prière - 君よ</a>
+					<a href="https://youtu.be/hGu_UevvEBA">Beach Weather - Chit Chat</a>
 				</div>
 			</div>
 		</div >
