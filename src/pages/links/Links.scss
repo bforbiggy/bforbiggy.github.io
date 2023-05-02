@@ -72,12 +72,15 @@
 }
 
 .dot {
-	height: 10px;
-	width: 10px;
+	// For some ungodly reason, I can't force width to be 10px sometimes
+	min-width: 10px;
+	max-width: 10px;
+	min-height: 10px;
+	max-height: 10px;
 	background-color: theme.$swamp;
 	border-radius: 50%;
 	position: relative;
-	left: -1.5em;
+	left: -1.7em;
 }
 
 .snow {
