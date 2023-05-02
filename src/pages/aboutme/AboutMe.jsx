@@ -12,7 +12,7 @@ const AboutMe = () => {
 		<div className="aboutme" style={{ backgroundImage: `url(${massCircles})`, backgroundSize: "cover" }}>
 			<div className="card" >
 				<div className="bio">
-					<h2>Programmer, Artist, Gamer, Person.</h2>
+					<h1>Programmer, Artist, Gamer, Person.</h1>
 					<p>I'm a software engineer with 5 years of experience in the field, having worked on a wide range of projects that have honed my skills in software development and exposed me to various programming languages. Born and raised in NYC, I've always had a love for music, art, and physical fitness. I have a talent for playing the piano and enjoy drawing and painting in my spare time. I stay active through working out and boxing, and occasionally indulge in some gaming as well. My diverse interests and dedication to continuous learning make me a well-rounded and valuable asset to any client.</p>
 				</div>
 
