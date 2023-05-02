@@ -5,7 +5,6 @@ import layer2 from "./layer2.svg"
 import layer3 from "./layer3.svg"
 import layer4 from "./layer4.svg"
 import layer5 from "./layer5.svg"
-import networklines from "./networklines.svg"
 
 export {
 	flourish,
@@ -15,5 +14,4 @@ export {
 	layer3,
 	layer4,
 	layer5,
-	networklines,
 }

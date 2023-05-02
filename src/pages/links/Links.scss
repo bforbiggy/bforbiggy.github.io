@@ -31,14 +31,12 @@
 	}
 
 	.linkedlist {
-		border-left: 10px solid theme.$teal;
-		margin-left: 10vw;
+		border-left: 12px solid theme.$teal;
 		width: min-content;
+		z-index: 500;
 
-		padding-top: 50vh;
-		margin-top: -50vh;
-		padding-bottom: 50vh;
-		margin-bottom: -50vh;
+		margin: -50vh 0px -50vh 10vw;
+		padding: 50vh 0px 50vh 0px;
 
 		.link {
 			display: flex;
@@ -50,11 +48,13 @@
 			svg {
 				width: auto;
 				height: 2.75rem;
+				z-index: 500;
 			}
 
 			p {
 				width: 100%;
 				font-size: 2.5rem;
+				z-index: 500;
 			}
 
 			&:hover {
@@ -64,6 +64,35 @@
 				transition-duration: 0.3s;
 			}
 		}
+
+		.link:hover span {
+			display: none;
+		}
+	}
+}
+
+.dot {
+	height: 10px;
+	width: 10px;
+	background-color: theme.$swamp;
+	border-radius: 50%;
+	position: relative;
+	left: -1.5em;
+}
+
+.snow {
+	position: fixed;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+
+	.snowflake {
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		background: linear-gradient(theme.$maron, theme.$maron);
+		border-radius: 50%;
+		filter: drop-shadow(0 0 10px theme.$maron);
 	}
 }
 
@@ -74,5 +103,11 @@
 
 	to {
 		opacity: 1;
+	}
+}
+
+@keyframes link-entry {
+	from {
+		transform: translateY(100vh);
 	}
 }
