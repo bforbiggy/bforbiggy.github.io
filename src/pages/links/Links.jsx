@@ -3,7 +3,6 @@ import "./Links.scss";
 import React from "react";
 import { AiFillGithub, AiOutlineMail, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
 import { SiLeetcode, SiDiscord } from "react-icons/si";
-import { ReactComponent as Flourish } from "../../assets/flourish.svg";
 
 const links = [
 	{ text: "Email", icon: <AiOutlineMail />, url: "mailto:andyhecsp@gmail.com" },
@@ -18,10 +17,7 @@ const Links = () => {
 	return (
 		<div className="links-container">
 
-			<div className="title">
-				<p>Links</p>
-				<Flourish />
-			</div>
+			<h1>Links</h1>
 
 			<div className="linkedlist">
 				{links.map((link, index) => (

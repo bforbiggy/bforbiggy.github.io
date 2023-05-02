@@ -1,74 +1,67 @@
 @use "../../styles/theme" as theme;
 
 .links-container {
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+	min-height: 100vh;
+	min-width: 100vw;
+	margin-top: 5vh;
 
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-image: url("../../assets/floating-shapes.svg"),
-		linear-gradient(theme.$background, theme.$accent);
+	// background-image: radial-gradient(theme.$periwinkle, theme.$port);
+	h1 {
+		width: 60vw;
+		min-width: min-content;
+		position: relative;
+		text-align: center;
+		background-color: theme.$cabaret;
+		font-size: 5em;
+		z-index: 500;
+	}
 
-	.title {
-		margin-top: 4em;
-		margin-bottom: 1%;
-		animation: wipe-enter 1s ease-in;
-		width: min-content; // I hate you firefox.
+	h1::after {
+		background-color: theme.$cabaret;
+		content: "";
+		width: 3em;
+		height: 100%;
+		z-index: -1;
 
-		p {
-			font-size: 5rem;
-			margin: 0;
-		}
+		position: absolute;
+		right: -1em;
 
-		svg {
-			rotate: 180deg;
-			filter: invert(100%) brightness(102%);
-		}
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25% 50%);
+		transform: scaleX(-1);
 	}
 
 	.linkedlist {
-		max-width: 666px;
-		width: 100%;
+		border-left: 10px solid theme.$teal;
+		margin-left: 10vw;
+		width: min-content;
+
+		padding-top: 50vh;
+		margin-top: -50vh;
+		padding-bottom: 50vh;
+		margin-bottom: -50vh;
 
 		.link {
-			max-height: 55px;
 			display: flex;
-			flex-direction: row;
 			align-items: center;
-			margin: 1em 0 1em 0;
-			border-radius: 30px;
-			border-color: theme.$swamp-lighter;
+			gap: 1em;
+			padding-left: 1em;
+			padding-right: 1em;
 
-			background: linear-gradient(
-				90deg,
-				theme.$blue 0%,
-				theme.$blue-munsell 40%
-			);
+			svg {
+				width: auto;
+				height: 2.75rem;
+			}
+
+			p {
+				width: 100%;
+				font-size: 2.5rem;
+			}
 
 			&:hover {
 				border: 4px solid;
 				border-color: theme.$swamp-lighter;
 				scale: 0.97;
 				transition-duration: 0.3s;
-			}
-
-			svg {
-				width: auto;
-				height: 2.75rem;
-				margin-left: 1rem;
-			}
-
-			p {
-				margin-right: 1.75em; // Match half of svg width
-
-				width: 100%;
-				text-align: center;
-				font-size: 2.5rem;
-				font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-					"Lucida Sans", Arial, sans-serif;
 			}
 		}
 	}
@@ -77,17 +70,6 @@
 @keyframes wipe-enter {
 	from {
 		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes link-entry {
-	from {
-		opacity: 0;
-		transform: translateY(50px);
 	}
 
 	to {
