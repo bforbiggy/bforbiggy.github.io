@@ -39,8 +39,8 @@ const MiniBio = () => {
     <div className="content-container">
 
       {/* All the sparkles */}
-      {sparkles.map((data, index) =>
-        <div className="sparkle" style={data.style} key={`sparkle${index}`}>
+      {sparkles.map((data) =>
+        <div className="sparkle" style={data.style} key={`sparkle${data.style}`}>
           {data.sparkle}
         </div>
       )}

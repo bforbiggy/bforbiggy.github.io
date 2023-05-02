@@ -79,7 +79,7 @@ const Repositories = () => {
             {repos?.map((data) => (
               <a
                 href={data.html_url}
-                target="_blank" rel="noreferrer"
+                target="_blank" rel="noreferrer" key={data.name}
                 className="repository-container"
               >
                 <div className="name">

@@ -2,7 +2,7 @@ import { isMobile, randomInteger } from "../../core/Util";
 import React, { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 
-import { networklines } from "../../assets/svgs";
+import lightning from "../../assets/biglightning.png";
 import "./AboutMe.scss";
 
 let flakeCount = isMobile() ? 50 : 200;
@@ -39,15 +39,18 @@ const AboutMe = () => {
 		<div className="aboutme">
 			<div className="snow" id="snow">{flakes}</div>
 			<div className="card" >
-				<div className="cardcontent" style={{ backgroundImage: `url(${networklines})` }}>
-					<h2>Andy He</h2>
-					<p>I've a software engineer with 5 years of experience who loves to code new things all the time! My life started in the one and only New York City which is good, because some of the best ramen shops are in NYC! In my spare time I enjoy my hobbies like working out or boxing for exercise, coding for my brain and playing the piano for my creative side. </p>
+				<div className="left">
+					<h2>Programmer, Artist, Gamer, Person.</h2>
+					<p>I'm a software engineer with 5 years of experience in the field, having worked on a wide range of projects that have honed my skills in software development and exposed me to various programming languages. Born and raised in NYC, I've always had a love for music, art, and physical fitness. I have a talent for playing the piano and enjoy drawing and painting in my spare time. I stay active through working out and boxing, and occasionally indulge in some gaming as well. My diverse interests and dedication to continuous learning make me a well-rounded and valuable asset to any client.</p>
 				</div>
-				<div className="links">
-					<a href="https://youtu.be/yk9X4WceY64">Rat Boy & IBDY - Who's Ready For Tomorrow</a>
-					<a href="https://youtu.be/LyiGmDOznWM">La prière - 君よ</a>
-					<a href="https://youtu.be/hGu_UevvEBA">Beach Weather - Chit Chat</a>
-				</div>
+
+				<img src={lightning} alt="biggy" />
+			</div>
+
+			<div className="links">
+				<a href="https://youtu.be/yk9X4WceY64">Rat Boy & IBDY - Who's Ready For Tomorrow</a>
+				<a href="https://youtu.be/LyiGmDOznWM">La prière - 君よ</a>
+				<a href="https://youtu.be/hGu_UevvEBA">Beach Weather - Chit Chat</a>
 			</div>
 		</div >
 	);
