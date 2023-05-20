@@ -83,22 +83,6 @@
 	left: -1.7em;
 }
 
-.snow {
-	position: fixed;
-	overflow: hidden;
-	width: 100vw;
-	height: 100vh;
-
-	.snowflake {
-		position: absolute;
-		width: 10px;
-		height: 10px;
-		background: linear-gradient(theme.$maron, theme.$maron);
-		border-radius: 50%;
-		filter: drop-shadow(0 0 10px theme.$maron);
-	}
-}
-
 @keyframes wipe-enter {
 	from {
 		opacity: 0;
