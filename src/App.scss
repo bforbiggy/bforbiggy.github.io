@@ -1,12 +1,26 @@
 @use "./styles/theme" as theme;
 @use "./styles/sizes" as sizes;
 
-.maron {
-  background-color: theme.$maron;
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-.swamp {
-  background-color: theme.$swamp;
+::-webkit-scrollbar {
+	width: 4px;
+	height: 6px;
+}
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #c62368;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #c62368;
 }
 
 a,
@@ -14,14 +28,14 @@ a:hover,
 a:link,
 a:visited,
 a:active {
-  text-decoration: none;
-  color: white;
+	text-decoration: none;
+	color: white;
 }
 
 ::selection {
-  background: theme.$port;
+	background: theme.$port;
 }
 
 ::-moz-selection {
-  background: theme.$port;
+	background: theme.$port;
 }

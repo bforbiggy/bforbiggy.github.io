@@ -7,6 +7,7 @@ import HomePage from "../pages/homepage/Homepage";
 const Repositories = React.lazy(() => import("../pages/repositories/Repositories"));
 const Links = React.lazy(() => import("../pages/links/Links"));
 const AboutMe = React.lazy(() => import("../pages/aboutme/AboutMe"));
+const Movie = React.lazy(() => import("../pages/movie/Movie"));
 
 const SiteRouter = () => {
   return (
@@ -17,6 +18,7 @@ const SiteRouter = () => {
         <Route path="repositories/" element={<Repositories />} />
         <Route path="aboutme/" element={<AboutMe />} />
         <Route path="card/" element={<AboutMe />} />
+        <Route path="theminionsmovie/" element={<Movie />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>
