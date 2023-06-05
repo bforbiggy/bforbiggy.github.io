@@ -6,28 +6,28 @@ import "./MiniBio.scss"
 const sparkles = [
   {
     sparkle: <HiSparkles style={{ color: "#262853" }} />,
-    style: {
+    parentStyle: {
       top: "20%", left: "20%",
       animationDuration: "3s"
     }
   },
   {
     sparkle: <HiSparkles style={{ color: "#051929" }} />,
-    style: {
+    parentStyle: {
       top: "70%", right: "20%",
       animationDelay: "200ms", animationDuration: "3.5s",
     }
   },
   {
     sparkle: <IoSparkles style={{ color: "#171718" }} />,
-    style: {
+    parentStyle: {
       top: "10%", right: "15%",
       animationDelay: "500ms", animationDuration: "4s",
     }
   },
   {
     sparkle: <IoSparkles style={{ color: "#171718" }} />,
-    style: {
+    parentStyle: {
       bottom: "10%", left: "20%",
       animationDelay: "50ms", animationDuration: "5s",
     }
@@ -39,8 +39,8 @@ const MiniBio = () => {
     <div className="content-container">
 
       {/* All the sparkles */}
-      {sparkles.map((data) =>
-        <div className="sparkle" style={data.style} key={`sparkle${data.style}`}>
+      {sparkles.map((data, index) =>
+        <div className="sparkle" style={data.parentStyle} key={`sparkle${index}`}>
           {data.sparkle}
         </div>
       )}

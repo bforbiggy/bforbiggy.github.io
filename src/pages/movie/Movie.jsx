@@ -1,7 +1,7 @@
 import "./Movie.scss";
 
 const Movie = () => {
-	return <div id="movie" class="movie">
+	return <div id="movie" className="movie">
 		<iframe
 			title="minions"
 			src="https://archive.org/embed/minions-the-rise-of-gru-2022"
