@@ -47,16 +47,13 @@ $menuWidth: 400px;
 			font-weight: bolder;
 
 			&:hover {
+				color: white;
 				background-image: linear-gradient(
 					to right,
 					theme.$port,
 					transparent 90%
 				);
 				border-left: 4px solid theme.$maron;
-			}
-
-			&:hover {
-				color: white;
 				border-left: 1px solid transparent;
 			}
 
