@@ -4,6 +4,10 @@
 	width: 100vw;
 	min-height: 100vh;
 	height: fit-content;
+<<<<<<< Updated upstream
+=======
+	// background: radial-gradient(ellipse at top, theme.$accent 40%, transparent);
+>>>>>>> Stashed changes
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -11,6 +15,7 @@
 	.card {
 		display: flex;
 		justify-content: center;
+<<<<<<< Updated upstream
 		align-items: center;
 		flex-wrap: wrap-reverse;
 		gap: 100px;
@@ -31,6 +36,17 @@
 			p {
 				font-size: 17px;
 			}
+=======
+		flex-direction: row;
+		width: 100%;
+		flex-wrap: wrap;
+		gap: 100px;
+		z-index: 999;
+
+		.left {
+			text-overflow: wrap;
+			max-width: 500px;
+>>>>>>> Stashed changes
 		}
 
 		img {
@@ -40,17 +56,40 @@
 	}
 
 	.links {
+<<<<<<< Updated upstream
 		z-index: 700;
+=======
+		z-index: 999;
+>>>>>>> Stashed changes
 		width: 100%;
 		display: flex;
 		flex-direction: column;
 		text-align: center;
 		margin-top: 5em;
+<<<<<<< Updated upstream
 		padding-bottom: 50px;
 
 		a {
 			color: aquamarine;
 			text-decoration: underline;
 		}
+=======
+	}
+}
+
+.snow {
+	position: fixed;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+
+	.snowflake {
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		background: linear-gradient(theme.$maron, theme.$maron);
+		border-radius: 50%;
+		filter: drop-shadow(0 0 10px theme.$maron);
+>>>>>>> Stashed changes
 	}
 }

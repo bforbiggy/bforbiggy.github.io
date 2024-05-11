@@ -81,6 +81,7 @@ const Repositories = () => {
                 href={data.html_url}
                 target="_blank" rel="noreferrer" key={data.name}
                 className="repository-container"
+                key={data.name}
               >
                 <div className="name">
                   <RiGitBranchLine /> {data.name}
