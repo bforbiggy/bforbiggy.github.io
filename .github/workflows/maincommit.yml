@@ -10,5 +10,5 @@ jobs:
       - run: cd ${{github.workspace}}
       - run: ls
       - run: npm install
-      - run : npm deploy
+      - run: npm deploy
       - run: echo "Github Action Job Status: ${{ job.status }}."
