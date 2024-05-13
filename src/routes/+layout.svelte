@@ -1,12 +1,17 @@
 <script>
-	import Menu from "./Menu.svelte";
+	import "./global.css";
+	import Menu from "./components/Menu.svelte";
+	import { setContext } from "svelte";
+	import { writable } from "svelte/store";
+
+	setContext(
+		"menu",
+		writable({
+			active: false,
+			animated: false,
+		})
+	);
 </script>
 
 <Menu></Menu>
 <slot />
-
-<style lang="postcss">
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
-</style>
