@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/434.bff69722.chunk.css","mappings":"AAAA,OAEC,aADA,WACA,CAGD,WACC","sources":["pages/movie/Movie.scss"],"sourcesContent":["iframe {\r\n\twidth: 100vw;\r\n\theight: 100vh;\r\n}\r\n\r\n.buttonbar {\r\n\tdisplay: none;\r\n}\r\n"],"names":[],"sourceRoot":""}
