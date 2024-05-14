@@ -5,7 +5,10 @@
 	let slammed = false;
 </script>
 
-<div class="bg-slate-800 w-screen h-screen flex justify-center items-center">
+<div
+	class="bg-slate-800 w-screen h-screen flex justify-center items-center
+	{slammed && 'animate-[rumble_0.4s]'}"
+>
 	<!-- Waves -->
 	<div class="z-10 absolute top-0 left-0 w-screen bg-cover">
 		<img class="block w-full h-full" src={WavesTop} alt="" />
@@ -16,12 +19,11 @@
 
 	<!-- Rings -->
 	<div class="absolute w-screen h-screen overflow-hidden">
-		{#each ["bg-red-300", "bg-yellow-300", "bg-green-300", "bg-blue-300", "bg-purple-300", "bg-pink-300", "bg-orange-300", "bg-slate-800"] as color, i}
+		{#each ["bg-red-300", "bg-yellow-300", "bg-green-300", "bg-blue-300", "bg-purple-300", "bg-pink-300", "bg-slate-900"] as color, i}
 			<div
 				class="absolute top-1/2 left-1/2 rounded-full w-[1vw] h-[1vh]
-			{slammed && 'scale-[150]'} 
-			transition-all duration-700 {color}"
-				style="transition-delay: {i * 0.3}s;"
+			{slammed && 'scale-[150]'} transition-all duration-700 {color}"
+				style="transition-delay: {i * 0.25}s;"
 			></div>
 		{/each}
 	</div>
