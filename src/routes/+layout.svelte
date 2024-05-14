@@ -1,16 +1,14 @@
 <script>
 	import "./global.css";
-	import Menu from "./components/Menu.svelte";
+	import Menu from "$lib/core/Menu.svelte";
 	import { setContext } from "svelte";
 	import { writable } from "svelte/store";
 
-	setContext(
-		"menu",
-		writable({
-			active: false,
-			animated: false,
-		})
-	);
+	const menu = writable(false);
+	setContext("menu", menu);
+
+	const bgm = writable(false);
+	setContext("bgm", bgm);
 </script>
 
 <Menu></Menu>
