@@ -10,4 +10,4 @@
 	});
 </script>
 
-<audio autoplay bind:paused src={BGMAudio}></audio>
+<audio src={BGMAudio} bind:paused autoplay loop></audio>
