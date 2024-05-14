@@ -10,12 +10,22 @@
 	{slammed && 'animate-[rumble_0.4s]'}"
 >
 	<!-- Waves -->
-	<div class="z-10 absolute top-0 left-0 w-screen bg-cover">
-		<img class="block w-full h-full" src={WavesTop} alt="" />
+	<!-- <div class="z-10 absolute top-0 left-0 w-screen bg-contain md:bg-cover">
+		<img class="" src={WavesTop} alt="" />
 	</div>
-	<div class="z-10 absolute bottom-0 left-0 w-screen bg-cover">
-		<img class="block w-full h-full" src={WavesBottom} alt="" />
-	</div>
+	<div class="z-10 absolute bottom-0 left-0 w-screen bg-contain md:bg-cover">
+		<img class="" src={WavesBottom} alt="" />
+	</div> -->
+	<img
+		class="z-10 absolute top-0 left-0 min-w-[2000px] w-screen bg-contain md:bg-cover"
+		src={WavesTop}
+		alt=""
+	/>
+	<img
+		class="z-10 absolute bottom-0 left-0 min-w-[2000px] w-screen bg-contain md:bg-cover"
+		src={WavesBottom}
+		alt=""
+	/>
 
 	<!-- Rings -->
 	<div class="absolute w-screen h-screen overflow-hidden">
@@ -30,11 +40,11 @@
 
 	<!-- Centerpiece -->
 	<button
-		class="z-50 w-auto h-auto shadow-[0px_1rem_2rem_theme('colors.red.600')] rounded-full bg-red-600"
+		class="z-50 shadow-[0px_1rem_2rem_theme('colors.red.600')] rounded-full bg-red-600"
 		on:click={() => (slammed = true)}
 	>
 		<img
-			class="rounded-full drop-shadow-md border-4 border-red-600
+			class="w-[500px] h-auto max-w-[90vw] rounded-full drop-shadow-md border-4 border-red-600
 			{!slammed && 'hover:-translate-y-14 transition-all'}
 			{slammed && 'transition-all duration-75'}"
 			src="https://i.imgur.com/fV9s2su.jpg"
