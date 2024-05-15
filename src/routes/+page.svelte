@@ -9,11 +9,7 @@
 	{slammed && 'animate-[rumble_0.4s]'}"
 >
 	<!-- Top Waves -->
-	<img
-		class="-z-40 min-w-[2000px] w-screen bg-contain md:bg-cover"
-		src={Waves}
-		alt=""
-	/>
+	<img class="-z-40 min-w-[100vw] bg-cover" src={Waves} alt="" />
 
 	<!-- Rings -->
 	<div class="-z-50 absolute w-screen h-screen overflow-hidden">
@@ -28,8 +24,9 @@
 
 	<!-- Centerpiece -->
 	<div
-		class="flex-col transition-all rounded-full drop-shadow-md bg-slate-800 border-4 border-red-600"
+		class="flex flex-col transition-all rounded-full drop-shadow-md bg-slate-800 border-4 border-red-600"
 	>
+		<!-- Profile -->
 		<button
 			class="z-50 shadow-[0px_1rem_2rem_theme('colors.red.600')] rounded-full bg-red-600"
 			on:click={() => (slammed = true)}
@@ -43,6 +40,7 @@
 			/>
 		</button>
 
+		<!-- About Me -->
 		<div
 			class="-z-50 w-[var(--max-radius)] flex flex-col gap-4 text-center break-words overflow-hidden rounded-full
 			px-12 {slammed ? 'h-auto pt-6 pb-16' : 'h-0 p-0'} transition-all"
@@ -60,16 +58,12 @@
 	</div>
 
 	<!-- Bottom Waves -->
-	<img
-		class="-z-40 min-w-[2000px] w-screen rotate-180 bg-contain md:bg-cover"
-		src={Waves}
-		alt=""
-	/>
+	<img class="-z-40 min-w-[100vw] rotate-180 bg-cover" src={Waves} alt="" />
 </div>
 
 <style>
 	:root {
-		--max-radius: min(500px, 90vh);
+		--max-radius: min(500px, 90vw, 90vh);
 	}
 
 	:global(body) {
