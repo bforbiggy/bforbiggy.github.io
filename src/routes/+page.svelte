@@ -45,7 +45,7 @@
 
 		<div
 			class="-z-50 w-[var(--max-radius)] flex flex-col gap-4 text-center break-words overflow-hidden rounded-full
-			px-12 {slammed ? 'h-auto pt-6 pb-20' : 'h-0 p-0'} transition-all"
+			px-12 {slammed ? 'h-auto pt-6 pb-16' : 'h-0 p-0'} transition-all"
 		>
 			<p class="text-4xl text-white">[ABOUTME.md]</p>
 			<p class="text-white">
