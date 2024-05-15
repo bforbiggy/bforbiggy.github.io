@@ -5,13 +5,11 @@
 </script>
 
 <div
-	class="min-w-screen max-w-[100vw] min-h-screen max-h-[100vh] flex flex-col justify-between items-center
+	class="min-w-screen max-w-[100vw] min-h-screen max-h-[100vh] overflow-x-hidden flex flex-col justify-between items-center
 	{slammed && 'animate-[rumble_0.4s]'}"
 >
 	<!-- Top Waves -->
-	<div class="max-w-full overflow-x-hidden">
-		<img class="-z-40 min-w-[2000px] w-screen" src={Waves} alt="" />
-	</div>
+	<img class="-z-40 min-w-[2000px] w-screen" src={Waves} alt="" />
 
 	<!-- Rings -->
 	<div class="-z-50 absolute w-screen h-screen overflow-hidden">
@@ -60,9 +58,7 @@
 	</div>
 
 	<!-- Bottom Waves -->
-	<div class="max-w-full overflow-x-hidden">
-		<img class="-z-40 min-w-[2000px] w-screen rotate-180" src={Waves} alt="" />
-	</div>
+	<img class="-z-40 min-w-[2000px] w-screen rotate-180" src={Waves} alt="" />
 </div>
 
 <style>
