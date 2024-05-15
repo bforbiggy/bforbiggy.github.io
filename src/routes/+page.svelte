@@ -33,8 +33,8 @@
 		>
 			<img
 				class="w-[var(--max-radius)] h-[var(--max-radius)] rounded-full
-			{!slammed && 'hover:-translate-y-14 transition-all'}
-			{slammed && 'transition-all duration-75'}"
+			{!slammed && 'hover:-translate-y-14 transition-transform'}
+			{slammed && 'transition-transform duration-75'}"
 				src="https://i.imgur.com/fV9s2su.jpg"
 				alt="Profile"
 			/>
@@ -58,7 +58,7 @@
 	</div>
 
 	<!-- Bottom Waves -->
-	<img class="-z-40 min-w-[100vw] rotate-180 bg-cover" src={Waves} alt="" />
+	<img class="-z-40 bg-cover rotate-180" src={Waves} alt="" />
 </div>
 
 <style>
