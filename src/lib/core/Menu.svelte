@@ -2,28 +2,30 @@
 	import { base } from "$app/paths";
 	import { getContext } from "svelte";
 	import Music from "./Music.svelte";
-	import IconHome from "$lib/assets/icon-home.svelte";
+	import IconMenu from "$lib/assets/icon-menu.svelte";
 	import IconLink from "$lib/assets/icon-link.svelte";
 	import IconMusic from "$lib/assets/icon-music.svelte";
 	import IconNoMusic from "$lib/assets/icon-no-music.svelte";
 
 	const menu = getContext("menu");
 	const bgm = getContext("bgm");
+
+	const BUTTON_STYLES = "w-9 h-auto stroke-neutral-200 fill-neutral-200";
 </script>
 
 <!-- Menu icons -->
-<div class="absolute z-50 top-2 w-screen flex justify-center">
+<div class="absolute z-50 top-2 left-2 h-4">
 	<button on:click={() => ($menu = !$menu)}>
-		<IconHome classStyles="w-11 h-auto fill-neutral-950" />
+		<IconMenu classStyles={BUTTON_STYLES} />
 	</button>
 	<button>
-		<IconLink classStyles="w-11 h-auto stroke-neutral-950" />
+		<IconLink classStyles={BUTTON_STYLES} />
 	</button>
 	<button on:click={() => ($bgm = !$bgm)}>
 		{#if $bgm}
-			<IconMusic classStyles="w-11 h-auto stroke-neutral-950" />
+			<IconMusic classStyles={BUTTON_STYLES} />
 		{:else}
-			<IconNoMusic classStyles="w-11 h-auto stroke-neutral-950" />
+			<IconNoMusic classStyles={BUTTON_STYLES} />
 		{/if}
 	</button>
 </div>
