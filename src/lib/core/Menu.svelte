@@ -1,11 +1,15 @@
 <script>
 	import { base } from "$app/paths";
+	import { page } from "$app/stores";
 	import { getContext } from "svelte";
 	import Music from "./Music.svelte";
-	import IconMenu from "$lib/assets/icons/icon-menu.svelte";
-	import IconLink from "$lib/assets/icons/icon-link.svelte";
-	import IconMusic from "$lib/assets/icons/icon-music.svelte";
-	import IconNoMusic from "$lib/assets/icons/icon-no-music.svelte";
+	import {
+		IconMenu,
+		IconLink,
+		IconMusic,
+		IconNoMusic,
+		IconClose,
+	} from "$lib/assets/icons/icons.js";
 
 	const menu = getContext("menu");
 	const bgm = getContext("bgm");
@@ -15,7 +19,7 @@
 
 <!-- Menu icons -->
 <div class="absolute z-50 top-2 left-2 h-4">
-	<button on:click={() => ($menu = !$menu)}>
+	<button on:click={() => ($menu = true)}>
 		<IconMenu classStyles={BUTTON_STYLES} />
 	</button>
 	<button>
@@ -32,10 +36,18 @@
 
 <!-- Actual Menu -->
 <nav
-	class="fixed bg-slate-500 bg-opacity-80 backdrop-blur-md h-screen w-screen max-w-[800px] flex flex-col {!$menu &&
-		'hidden'}"
+	class="z-50 fixed bg-slate-500 bg-opacity-80 backdrop-blur-md h-screen w-screen max-w-[600px]
+	flex flex-col p-6 text-white text-2xl font-semibold
+	{$menu ? 'translate-x-0' : '-translate-x-full'} transition-transform"
 >
-	<a class="text-white" href="{base}/">Home</a>
-	<p class="text-white">WIP</p>
+	<button class="ml-auto w-12 h-auto" on:click={() => ($menu = false)}>
+		<IconClose></IconClose>
+	</button>
+	{#each [{ url: "/", name: "Home" }, { url: "/links", name: "Links" }] as button}
+		<a
+			class="rounded-md {button.url == $page.route.id && 'bg-black'} p-2"
+			href="{base}	{button.url}">{button.name}</a
+		>
+	{/each}
 </nav>
 <Music></Music>

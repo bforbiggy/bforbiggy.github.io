@@ -22,7 +22,7 @@
 
 	<!-- Centerpiece -->
 	<div
-		class="z-50 my-auto flex flex-col transition-all rounded-full drop-shadow-md bg-slate-800 border-4 border-red-600"
+		class="z-20 my-auto flex flex-col transition-all rounded-full drop-shadow-md bg-slate-800 border-4 border-red-600"
 	>
 		<!-- Profile -->
 		<button
