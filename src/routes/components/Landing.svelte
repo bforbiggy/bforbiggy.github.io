@@ -1,5 +1,5 @@
 <script>
-	import WaveBottomLight from "$lib/assets/WaveBottomLight.svelte";
+	import WavesBottomLight from "$lib/assets/WavesBottomLight.svelte";
 
 	let slammed = false;
 </script>
@@ -54,7 +54,7 @@
 	</div>
 
 	<!-- Bottom Waves -->
-	<WaveBottomLight classStyles="z-20 min-w-[2000px] w-screen rotate-180" />
+	<WavesBottomLight classStyles="z-20 min-w-[2000px] w-screen rotate-180" />
 </div>
 
 <style>
