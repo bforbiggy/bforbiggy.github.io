@@ -2,10 +2,10 @@
 	import { base } from "$app/paths";
 	import { getContext } from "svelte";
 	import Music from "./Music.svelte";
-	import IconMenu from "$lib/assets/icon-menu.svelte";
-	import IconLink from "$lib/assets/icon-link.svelte";
-	import IconMusic from "$lib/assets/icon-music.svelte";
-	import IconNoMusic from "$lib/assets/icon-no-music.svelte";
+	import IconMenu from "$lib/assets/icons/icon-menu.svelte";
+	import IconLink from "$lib/assets/icons/icon-link.svelte";
+	import IconMusic from "$lib/assets/icons/icon-music.svelte";
+	import IconNoMusic from "$lib/assets/icons/icon-no-music.svelte";
 
 	const menu = getContext("menu");
 	const bgm = getContext("bgm");
@@ -36,5 +36,6 @@
 		'hidden'}"
 >
 	<a class="text-white" href="{base}/">Home</a>
+	<p class="text-white">WIP</p>
 </nav>
 <Music></Music>

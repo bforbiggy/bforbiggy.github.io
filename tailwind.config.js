@@ -3,6 +3,10 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
+      colors: {
+        "haikei-orange": "#FA7268",
+        "haikei-red": "#C62368"
+      },
       keyframes: {
         rumble: {
           '0%': {
