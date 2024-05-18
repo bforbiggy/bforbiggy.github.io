@@ -36,7 +36,7 @@
 
 <!-- Actual Menu -->
 <nav
-	class="z-50 fixed bg-slate-500 bg-opacity-80 backdrop-blur-md h-screen w-screen max-w-[600px]
+	class="z-50 fixed bg-slate-900 bg-opacity-80 backdrop-blur-md h-screen w-screen max-w-[600px]
 	flex flex-col p-6 text-white text-2xl font-semibold
 	{$menu ? 'translate-x-0' : '-translate-x-full'} transition-transform"
 >
@@ -47,10 +47,13 @@
 		/>
 	</button>
 	{#each [{ url: "/", name: "Home" }, { url: "/links", name: "Links" }] as button}
+		{@const active = button.url == $page.route.id}
 		<a
-			class="rounded-md {button.url == $page.route.id && 'bg-black'} p-2"
-			href="{base}	{button.url}">{button.name}</a
+			class="rounded-md {active && 'bg-gradient-to-r from-red-800'} p-2 mr-16"
+			href="{base}	{button.url}"
 		>
+			{button.name}
+		</a>
 	{/each}
 </nav>
 <Music></Music>
