@@ -46,9 +46,10 @@
 		>
 			<p class="text-4xl text-white">[PERSONAL.md]</p>
 			<p class="text-white">
-				My goal is to be a jack of no trades, master of all. There is nothing I
-				enjoy more than realizing the innate potential that we all have as
-				humans and seeing where it takes me. Scroll or check the menu for more!
+				My goal is to become a jack of none - master of all. After all, there is
+				nothing more enjoyable than realizing the innate potential we have as
+				humans and seeing where it takes us. Scroll or check out the menu for
+				more!
 			</p>
 		</div>
 	</div>

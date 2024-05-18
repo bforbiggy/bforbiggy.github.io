@@ -1,5 +1,5 @@
 <div
-	class="w-screen bg-[theme('colors.haikei-red')] p-[5em] flex flex-col justify-center items-center gap-12 font-mono text-white text-center"
+	class="max-w-screen bg-[theme('colors.haikei-red')] p-[5em] flex flex-col justify-center items-center gap-12 font-mono text-white text-center"
 >
 	<h1 class="text-7xl text-white font-bold">About Me</h1>
 	<p class="max-w-[800px] text-2xl text-bold">
