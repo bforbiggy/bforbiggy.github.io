@@ -3,33 +3,33 @@
 	import { page } from "$app/stores";
 	import { getContext } from "svelte";
 	import Music from "./Music.svelte";
-	import {
-		IconMenu,
-		IconLink,
-		IconMusic,
-		IconNoMusic,
-		IconClose,
-	} from "$lib/assets/icons/icons.js";
 
 	const menu = getContext("menu");
 	const bgm = getContext("bgm");
 
-	const BUTTON_STYLES = "w-9 h-auto stroke-neutral-200 fill-neutral-200";
+	const BUTTON_CLASSES = "w-9 h-9 stroke-neutral-200 fill-neutral-200";
+	const BUTTON_STYLES = "color: white;";
 </script>
 
 <!-- Menu icons -->
-<div class="absolute z-50 top-2 left-2 h-4">
+<div class="fixed z-50 top-2 left-2 h-4">
 	<button on:click={() => ($menu = true)}>
-		<IconMenu classStyles={BUTTON_STYLES} />
-	</button>
-	<button>
-		<IconLink classStyles={BUTTON_STYLES} />
+		<span
+			class="icon-[tabler--menu-2] {BUTTON_CLASSES}"
+			style={BUTTON_STYLES}
+		/>
 	</button>
 	<button on:click={() => ($bgm = !$bgm)}>
 		{#if $bgm}
-			<IconMusic classStyles={BUTTON_STYLES} />
+			<span
+				class="icon-[tabler--music] {BUTTON_CLASSES}"
+				style={BUTTON_STYLES}
+			/>
 		{:else}
-			<IconNoMusic classStyles={BUTTON_STYLES} />
+			<span
+				class="icon-[tabler--music-off] {BUTTON_CLASSES}"
+				style={BUTTON_STYLES}
+			/>
 		{/if}
 	</button>
 </div>
@@ -41,7 +41,10 @@
 	{$menu ? 'translate-x-0' : '-translate-x-full'} transition-transform"
 >
 	<button class="ml-auto w-12 h-auto" on:click={() => ($menu = false)}>
-		<IconClose></IconClose>
+		<span
+			class="icon-[ri--close-fill] {BUTTON_CLASSES}"
+			style={BUTTON_STYLES}
+		/>
 	</button>
 	{#each [{ url: "/", name: "Home" }, { url: "/links", name: "Links" }] as button}
 		<a

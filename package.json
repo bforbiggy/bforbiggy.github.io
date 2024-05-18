@@ -9,6 +9,7 @@
 		"deploy": "vite build && npx gh-pages -d build -t true"
 	},
 	"devDependencies": {
+		"@iconify/tailwind": "^1.1.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
@@ -20,6 +21,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@iconify-json/ri": "^1.1.20",
+		"@iconify-json/tabler": "^1.1.112",
 		"@sveltejs/adapter-static": "^3.0.1",
 		"gh-pages": "^6.1.1"
 	}

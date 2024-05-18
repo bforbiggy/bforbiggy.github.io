@@ -69,16 +69,20 @@
 	class="max-w-[100vw] overflow-x-hidden bg-slate-950 flex flex-col items-center"
 >
 	<WavesTopDark classStyles="z-20 min-w-[2000px] w-screen" />
-	<div class="flex flex-row flex-wrap justify-center max-w-[1000px] p-2">
-		{#each SKILLS as skill}
-			<div class="group flex flex-col m-4">
-				<i href={skill.link} class="text-6xl rounded {skill.icon}"></i>
-				<div class="invisible group-hover:visible text-white text-center">
-					{skill.name}
+	<div class="flex flex-col items-center">
+		<h1 class="text-5xl text-white text-middle">Skills</h1>
+		<span class="w-14 h-14 icon-[ri--fire-fill]" style="color: white;" />
+		<div class="flex flex-row flex-wrap justify-center max-w-[1000px] p-2">
+			{#each SKILLS as skill}
+				<div class="group flex flex-col m-4">
+					<i href={skill.link} class="text-6xl rounded {skill.icon}"></i>
+					<div class="invisible group-hover:visible text-white text-center">
+						{skill.name}
+					</div>
+					<div class="" />
 				</div>
-				<div class="" />
-			</div>
-		{/each}
+			{/each}
+		</div>
 	</div>
 
 	<WavesBottomDark classStyles="z-20 min-w-[2000px] w-screen" />
