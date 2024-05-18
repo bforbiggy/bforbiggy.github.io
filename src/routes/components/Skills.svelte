@@ -1,6 +1,7 @@
 <script>
 	import WavesTopDark from "$lib/assets/WavesTopDark.svelte";
 	import WavesBottomDark from "$lib/assets/WavesBottomDark.svelte";
+	import { onMount } from "svelte";
 
 	const SKILLS = [
 		{
@@ -55,6 +56,14 @@
 			link: "https://nodejs.org/en/",
 		},
 	];
+
+	let isMobile = false;
+	onMount(() => {
+		isMobile =
+			/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+				navigator.userAgent
+			);
+	});
 </script>
 
 <svelte:head>
@@ -79,28 +88,39 @@
 			<div class="w-[800px] max-w-[100vw] h-[1px] border border-rose-500"></div>
 		</div>
 
-		<div class="flex flex-row flex-wrap justify-center max-w-[1000px] py-5">
-			{#each SKILLS as skill, i}
-				{@const isEven = i % 2 === 0}
-				<div class="group flex flex-col items-center m-4 bg-inherit">
+		<div
+			class="flex flex-row flex-wrap justify-center max-w-[1000px] py-5
+
+			[&>a:nth-child(even)>*]:peer-hover:border-emerald-500
+				[&>a:nth-child(even)>i]:peer-hover:shadow-[15px_-15px_theme('colors.emerald.500')]
+			[&>a:nth-child(odd)>*]:peer-hover:border-rose-500
+				[&>a:nth-child(odd)>i]:peer-hover:shadow-[15px_-15px_theme('colors.rose.500')]
+				[&>a>.skillName]:peer-hover:opacity-100
+				[&>a]:peer-hover:scale-110
+
+			[&>a:nth-child(even):hover>*]:border-emerald-500
+				[&>a:nth-child(even)>i:hover]:shadow-[15px_-15px_theme('colors.emerald.500')]
+			[&>a:nth-child(odd):hover>*]:border-rose-500
+				[&>a:nth-child(odd)>i:hover]:shadow-[15px_-15px_theme('colors.rose.500')]
+				[&>a:hover>.skillName]:opacity-100
+				[&>a:hover]:scale-110"
+		>
+			{#each SKILLS as skill}
+				<a
+					href={skill.link}
+					class="pointer-events-none {!isMobile && 'md:pointer-events-auto'} 
+						group flex flex-col items-center m-4 bg-inherit transition-all"
+				>
 					<i
-						href={skill.link}
-						class="text-6xl {skill.icon} rounded p-5 mx-5 mt-5 border border-opacity-0 group-hover:border-opacity-100
-						{isEven ? 'border-emerald-500' : 'border-rose-500'} duration-150"
-					></i>
-					<div
-						class="w-[1px] h-4 border
-						{isEven ? 'border-emerald-500' : 'border-rose-500'} 
-							opacity-0 group-hover:opacity-100 duration-150"
+						class="text-6xl {skill.icon} rounded p-5 mx-5 mt-5 border border-transparent duration-150"
 					/>
+					<div class="w-[1px] h-4 border border-transparent duration-150" />
 					<div
-						class="text-xl text-white border-2 rounded-md
-						{isEven ? 'border-emerald-500' : 'border-rose-500'} 
-						px-3 py-2 opacity-0 group-hover:opacity-100 duration-150"
+						class="skillName text-xl text-white rounded-md px-3 py-2 opacity-0 border-2 border-transparent duration-150"
 					>
 						{skill.name}
 					</div>
-				</div>
+				</a>
 			{/each}
 		</div>
 	</div>
