@@ -49,7 +49,9 @@
 	{#each [{ url: "/", name: "Home" }, { url: "/links", name: "Links" }] as button}
 		{@const active = button.url == $page.route.id}
 		<a
-			class="rounded-md {active && 'bg-gradient-to-r from-red-800'} p-2 mr-16"
+			class="text-center rounded-md
+				{active && 'bg-gradient-to-r from-transparent via-pink-700 to-transparent'} 
+				p-2 mr-16"
 			href="{base}	{button.url}"
 		>
 			{button.name}
