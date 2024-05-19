@@ -15,7 +15,7 @@
 				class="absolute top-1/2 left-1/2 rounded-full w-[1vw] h-[1vh]
 					{slammed ? 'opacity-100' : 'opacity-0'}
 					{slammed && 'scale-[150] transition-slide duration-700'}  {color}"
-				style="transition-delay: {i * 0.25}s;"
+				style={{ "transition-delay": `${i * 0.25}s` }}
 			></div>
 		{/each}
 	</div>
