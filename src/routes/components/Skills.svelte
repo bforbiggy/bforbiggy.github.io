@@ -82,7 +82,7 @@
 		<div class="flex flex-col items-center gap-3 peer">
 			<span
 				class="w-14 h-14 icon-[ri--fire-fill]"
-				style={{ color: "rgb(244 63 94)" }}
+				style="color: rgb(244 63 94);"
 			/>
 			<h1 class="text-5xl text-white text-middle">Skills</h1>
 			<div class="w-[800px] max-w-[100vw] h-[1px] border border-rose-500"></div>
