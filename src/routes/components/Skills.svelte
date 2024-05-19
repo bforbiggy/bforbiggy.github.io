@@ -91,19 +91,20 @@
 		<div
 			class="flex flex-row flex-wrap justify-center max-w-[1000px] py-5
 
-			[&>a:nth-child(even)>*]:peer-hover:border-emerald-500
-				[&>a:nth-child(even)>i]:peer-hover:shadow-[15px_-15px_theme('colors.emerald.500')]
-			[&>a:nth-child(odd)>*]:peer-hover:border-rose-500
-				[&>a:nth-child(odd)>i]:peer-hover:shadow-[15px_-15px_theme('colors.rose.500')]
-				[&>a>.skillName]:peer-hover:opacity-100
-				[&>a]:peer-hover:scale-110
-
 			[&>a:nth-child(even):hover>*]:border-emerald-500
+			[&>a:nth-child(even)>*]:peer-hover:border-emerald-500
 				[&>a:nth-child(even)>i:hover]:shadow-[15px_-15px_theme('colors.emerald.500')]
+				[&>a:nth-child(even)>i]:peer-hover:shadow-[15px_-15px_theme('colors.emerald.500')]
+
 			[&>a:nth-child(odd):hover>*]:border-rose-500
+			[&>a:nth-child(odd)>*]:peer-hover:border-rose-500
 				[&>a:nth-child(odd)>i:hover]:shadow-[15px_-15px_theme('colors.rose.500')]
+				[&>a:nth-child(odd)>i]:peer-hover:shadow-[15px_-15px_theme('colors.rose.500')]
+
 				[&>a:hover>.skillName]:opacity-100
-				[&>a:hover]:scale-110"
+				[&>a>.skillName]:peer-hover:opacity-100
+				[&>a:hover]:scale-110
+				[&>a]:peer-hover:scale-110"
 		>
 			{#each SKILLS as skill}
 				<a
