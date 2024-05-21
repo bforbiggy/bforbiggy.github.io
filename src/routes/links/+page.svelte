@@ -57,61 +57,65 @@
 </svelte:head>
 
 <div
-	class="w-screen h-screen flex justify-center items-center gap-3 overflow-x-hidden font-[roboto-slab]"
+	class="w-screen max-w-screen h-screen gap-3 overflow-x-hidden font-[roboto-slab]"
 >
 	<div
-		class="absolute min-w-[2000px] w-screen h-screen bg-[url('$lib/assets/DarkStackedSteps.svg')]"
+		class="fixed min-w-[4000px] w-full h-full bg-[url('$lib/assets/DarkStackedSteps.svg')]"
 	/>
 
-	{#each LINKS as data, i}
-		{@const card = CARDS[i]}
-		{@const isRed = i % 2 === 0}
-		<a
-			href={data.url}
-			target="_blank"
-			class="relative w-[250px] h-[400px] group"
-		>
-			<!-- Card Face -->
-			<div
-				class="absolute inset-x-0 inset-y-0 bg-slate-950 scale-x-0 rounded-lg
+	<div
+		class="w-screen max-w-screen h-screen flex flex-wrap justify-center items-center py-16 gap-3"
+	>
+		{#each LINKS as data, i}
+			{@const card = CARDS[i]}
+			{@const isRed = i % 2 === 0}
+			<a
+				href={data.url}
+				target="_blank"
+				class="relative min-w-[250px] max-w-[250px] min-h-[400px] max-h-[400px] group"
+			>
+				<!-- Card Face -->
+				<div
+					class="absolute inset-x-0 inset-y-0 bg-slate-950 scale-x-0 rounded-lg
 				group-hover:scale-x-100 transition-all delay-300 duration-300"
-			>
-				<p
-					class="absolute top-2 left-2 text-3xl
-					{isRed ? 'text-red-500' : 'text-white'}"
 				>
-					{card.suit}<br />{card.num}
-				</p>
-				<p
-					class="absolute bottom-2 right-2 text-3xl
+					<p
+						class="absolute top-2 left-2 text-3xl
 					{isRed ? 'text-red-500' : 'text-white'}"
-				>
-					{card.suit}<br />{card.num}
-				</p>
-				<div class="absolute inset-x-0 inset-y-0 w-full h-full">
-					<span
-						class="w-full h-full {data.icon} 
+					>
+						{card.suit}<br />{card.num}
+					</p>
+					<p
+						class="absolute bottom-2 right-2 text-3xl
+					{isRed ? 'text-red-500' : 'text-white'}"
+					>
+						{card.suit}<br />{card.num}
+					</p>
+					<div class="absolute inset-x-0 inset-y-0 w-full h-full">
+						<span
+							class="w-full h-full {data.icon} 
 						{isRed ? 'text-red-500' : 'text-white'}"
-					/>
+						/>
+					</div>
 				</div>
-			</div>
 
-			<!-- Card Back -->
-			<div
-				class="absolute inset-x-0 inset-y-0 m-auto flex justify-center items-center
+				<!-- Card Back -->
+				<div
+					class="absolute inset-x-0 inset-y-0 m-auto flex justify-center items-center
 				group-hover:scale-x-0 transition-all delay-300 group-hover:delay-0 duration-300"
-			>
-				<img
-					class="absolute inset-x-0 inset-y-0 w-full h-full rounded-lg"
-					src={tarot}
-					alt=""
-				/>
-				<p
-					class="z-10 text-3xl text-center text-amber-200 text-bold select-none"
 				>
-					{data.name}
-				</p>
-			</div>
-		</a>
-	{/each}
+					<img
+						class="absolute inset-x-0 inset-y-0 w-full h-full rounded-lg"
+						src={tarot}
+						alt=""
+					/>
+					<p
+						class="z-10 text-3xl text-center text-amber-200 text-bold select-none"
+					>
+						{data.name}
+					</p>
+				</div>
+			</a>
+		{/each}
+	</div>
 </div>
