@@ -77,8 +77,12 @@
 <div
 	class="relative max-w-[100vw] overflow-x-hidden bg-slate-950 flex flex-col items-center"
 >
+	<div
+		class="z-10 absolute inset-0 m-auto w-full h-full bg-[url('$lib/assets/sprinkle.svg')] mb-32 opacity-35"
+	/>
+
 	<WavesTopDark class="z-20 min-w-[2000px] w-screen " />
-	<div class="flex flex-col items-center py-32">
+	<div class="z-30 flex flex-col items-center py-32">
 		<div class="flex flex-col items-center gap-3 peer">
 			<span
 				class="w-14 h-14 icon-[ri--fire-fill]"
@@ -125,5 +129,5 @@
 			{/each}
 		</div>
 	</div>
-	<WavesBottomDark class="z-20 min-w-[2000px] w-screen bg-slate-950" />
+	<WavesBottomDark class="z-20 min-w-[2000px] w-screen" />
 </div>
