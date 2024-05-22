@@ -6,6 +6,7 @@
 	viewBox="0 0 960 213"
 	class={$$props.class}
 >
+	<!-- Hide top portion -->
 	<defs>
 		<mask id="mask-hide">
 			<rect width="100%" height="100%" fill="white" />
@@ -16,6 +17,7 @@
 		</mask>
 	</defs>
 
+	<rect mask="url(#mask-hide)" width="100%" height="100%" fill="#020617" />
 	<path
 		mask="url(#mask-hide)"
 		fill="#c62368"
