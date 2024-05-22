@@ -54,10 +54,10 @@
 </svelte:head>
 
 <div
-	class="w-screen max-w-screen h-screen gap-3 overflow-x-hidden font-[roboto-slab]"
+	class="w-screen max-w-screen min-h-screen h-min-content gap-3 overflow-x-hidden font-[roboto-slab]"
 >
 	<div
-		class="fixed min-w-[4000px] w-full h-full bg-[url('$lib/assets/DarkStackedSteps.svg')]"
+		class="fixed min-w-[4000px] w-screen h-screen bg-[url('$lib/assets/DarkStackedSteps.svg')]"
 	/>
 
 	<div
