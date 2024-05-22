@@ -1,9 +1,6 @@
 <script>
-	import { onMount } from "svelte";
 	import { shuffle } from "lodash-es";
 	import tarot from "$lib/assets/tarot.webp";
-
-	onMount(() => {});
 
 	const CARDS = shuffle(
 		Array(52)
