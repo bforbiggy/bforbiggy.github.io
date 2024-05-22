@@ -78,7 +78,7 @@
 	class="relative max-w-[100vw] overflow-x-hidden bg-slate-950 flex flex-col items-center"
 >
 	<div
-		class="z-10 absolute inset-0 m-auto w-full h-full bg-[url('$lib/assets/sprinkle.svg')] opacity-35"
+		class="z-10 absolute inset-0 m-auto w-full h-full bg-[url('$lib/assets/Sprinkle.svg')] opacity-35"
 	/>
 
 	<WavesTopDark class="z-20 min-w-[2000px] w-screen " />
