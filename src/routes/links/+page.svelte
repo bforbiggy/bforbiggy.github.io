@@ -18,7 +18,7 @@
 			})
 	);
 
-	let links = [
+	let LINKS = [
 		{
 			name: "Email",
 			url: "mailto:andyhecsp@gmail.com",
@@ -44,24 +44,12 @@
 			url: "https://discord.com/users/187003715302064128",
 			icon: "icon-[tabler--brand-discord]",
 		},
-	];
-
-	const animStates = Array(links.length)
-		.fill()
-		.map((_) => ({
-			active: false,
-			face: "scale-x-0",
-			back: "scale-x-100",
-			finished: Promise.resolve(),
-		}));
-
-	async function updateState(i, active) {
-		if (!active) await animStates[i].finished;
-		animStates[i].face = active ? "scale-x-100" : "scale-x-0";
-		animStates[i].back = active ? "scale-x-0" : "scale-x-100";
-		animStates[i].active = active;
-		if (active) animStates[i].finished = new Promise((r) => setTimeout(r, 600));
-	}
+	].map((data) => ({
+		...data,
+		active: false,
+		face: "scale-x-0",
+		back: "scale-x-100",
+	}));
 </script>
 
 <svelte:head>
@@ -83,32 +71,43 @@
 	<div
 		class="w-screen max-w-screen min-h-screen flex flex-wrap justify-center items-center py-16 gap-3"
 	>
-		{#each links as data, i}
+		{#each LINKS as data, i}
+			{@const card = CARDS[i]}
 			{@const isRed = i % 2 === 0}
+			<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 			<a
 				href={data.url}
 				target="_blank"
 				class="relative min-w-[250px] max-w-[250px] min-h-[400px] max-h-[400px]"
-				on:focus={() => updateState(i, true)}
-				on:mouseover={() => updateState(i, true)}
-				on:mouseleave={() => updateState(i, false)}
+				on:mouseover={async () => {
+					data.face = "scale-x-100";
+					data.back = "scale-x-0";
+					data.active = true;
+					data.finished = new Promise((resolve) => setTimeout(resolve, 600));
+				}}
+				on:mouseleave={async () => {
+					await data.finished;
+					data.face = "scale-x-0";
+					data.back = "scale-x-100";
+					data.active = false;
+				}}
 			>
 				<!-- Card Face -->
 				<div
-					class="absolute inset-x-0 inset-y-0 m-auto bg-slate-950 rounded-lg
-						{animStates[i].face} transition-all delay-300 duration-300"
+					class="absolute inset-x-0 inset-y-0 bg-slate-950 rounded-lg
+						{data.face} transition-all delay-300 duration-300"
 				>
 					<p
 						class="absolute top-2 left-2 text-3xl
 							{isRed ? 'text-red-500' : 'text-white'}"
 					>
-						{CARDS[i].suit}<br />{CARDS[i].num}
+						{card.suit}<br />{card.num}
 					</p>
 					<p
 						class="absolute bottom-2 right-2 text-3xl
 							{isRed ? 'text-red-500' : 'text-white'}"
 					>
-						{CARDS[i].suit}<br />{CARDS[i].num}
+						{card.suit}<br />{card.num}
 					</p>
 					<div class="absolute inset-x-0 inset-y-0 w-full h-full">
 						<span
@@ -121,8 +120,7 @@
 				<!-- Card Back -->
 				<div
 					class="absolute inset-x-0 inset-y-0 m-auto flex justify-center items-center
-						{animStates[i].back} {!animStates[i].active && 'delay-[600ms]'} 
-						transition-all duration-300"
+						{data.back} {!data.active && 'delay-[600ms]'} transition-all duration-300"
 				>
 					<img
 						class="absolute inset-x-0 inset-y-0 w-full h-full rounded-lg"
