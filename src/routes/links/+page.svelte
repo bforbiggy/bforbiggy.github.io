@@ -77,7 +77,7 @@
 				<!-- Card Face -->
 				<div
 					class="absolute inset-x-0 inset-y-0 bg-slate-950 scale-x-0 rounded-lg
-				group-hover:scale-x-100 transition-all delay-300 duration-300"
+						group-hover:scale-x-100 transition-all delay-300 duration-300"
 				>
 					<p
 						class="absolute top-2 left-2 text-3xl
@@ -102,7 +102,7 @@
 				<!-- Card Back -->
 				<div
 					class="absolute inset-x-0 inset-y-0 m-auto flex justify-center items-center
-				group-hover:scale-x-0 transition-all delay-300 group-hover:delay-0 duration-300"
+						group-hover:scale-x-0 transition-all delay-300 group-hover:delay-0 duration-300"
 				>
 					<img
 						class="absolute inset-x-0 inset-y-0 w-full h-full rounded-lg"
