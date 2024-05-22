@@ -77,8 +77,8 @@
 <div
 	class="max-w-[100vw] overflow-x-hidden bg-slate-950 flex flex-col items-center"
 >
-	<WavesTopDark classStyles="z-20 min-w-[2000px] w-screen" />
-	<div class="flex flex-col items-center">
+	<WavesTopDark class="z-20 min-w-[2000px] w-screen" />
+	<div class="flex flex-col items-center py-32">
 		<div class="flex flex-col items-center gap-3 peer">
 			<span
 				class="w-14 h-14 icon-[ri--fire-fill]"
@@ -126,5 +126,5 @@
 		</div>
 	</div>
 
-	<WavesBottomDark classStyles="z-20 min-w-[2000px] w-screen" />
+	<WavesBottomDark class="z-20 min-w-[2000px] w-screen" />
 </div>

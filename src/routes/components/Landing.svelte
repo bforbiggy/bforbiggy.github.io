@@ -55,7 +55,7 @@
 	</div>
 
 	<!-- Bottom Waves -->
-	<WavesBottomLight classStyles="z-20 min-w-[2000px] w-screen rotate-180" />
+	<WavesBottomLight class="z-20 min-w-[2000px] w-screen rotate-180" />
 </div>
 
 <style>
