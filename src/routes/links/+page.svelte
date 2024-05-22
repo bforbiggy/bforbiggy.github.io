@@ -81,7 +81,7 @@
 	/>
 
 	<div
-		class="w-screen max-w-screen h-screen flex flex-wrap justify-center items-center py-16 gap-3"
+		class="w-screen max-w-screen min-h-screen flex flex-wrap justify-center items-center py-16 gap-3"
 	>
 		{#each links as data, i}
 			{@const isRed = i % 2 === 0}
