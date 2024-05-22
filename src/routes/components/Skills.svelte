@@ -75,9 +75,9 @@
 </svelte:head>
 
 <div
-	class="max-w-[100vw] overflow-x-hidden bg-slate-950 flex flex-col items-center"
+	class="relative max-w-[100vw] overflow-x-hidden bg-slate-950 flex flex-col items-center"
 >
-	<WavesTopDark class="z-20 min-w-[2000px] w-screen" />
+	<WavesTopDark class="z-20 min-w-[2000px] w-screen " />
 	<div class="flex flex-col items-center py-32">
 		<div class="flex flex-col items-center gap-3 peer">
 			<span
@@ -125,6 +125,5 @@
 			{/each}
 		</div>
 	</div>
-
-	<WavesBottomDark class="z-20 min-w-[2000px] w-screen" />
+	<WavesBottomDark class="z-20 min-w-[2000px] w-screen bg-slate-950" />
 </div>
