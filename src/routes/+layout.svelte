@@ -4,7 +4,10 @@
 	import { setContext } from "svelte";
 	import { writable } from "svelte/store";
 
-	const menu = writable(false);
+	const menu = writable({
+		icons: true,
+		sidebar: false,
+	});
 	setContext("menu", menu);
 
 	const bgm = writable({

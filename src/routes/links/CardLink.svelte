@@ -1,5 +1,5 @@
 <script>
-	import tarot from "$lib/assets/tarot.webp";
+	import tarot from "./tarot.webp";
 
 	export let name;
 	export let url;
