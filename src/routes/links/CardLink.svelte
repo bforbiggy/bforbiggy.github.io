@@ -19,6 +19,8 @@
 			backClass = active ? "scale-x-0 delay-0" : "scale-x-100 delay-300";
 		}
 	}
+
+	$: textColor = isRed ? "text-red-500" : "text-white";
 </script>
 
 <a
@@ -34,27 +36,20 @@
 	<!-- Card Face -->
 	<div
 		class="absolute inset-x-0 inset-y-0 bg-slate-950 rounded-lg
-						{faceClass} transition-all duration-300"
+			flex flex-col justify-between
+			{faceClass} transition-all duration-300"
 		on:transitionrun={() => (playing = true)}
 		on:transitionend={() => (playing = false)}
 	>
-		<p
-			class="absolute top-2 left-2 text-3xl
-							{isRed ? 'text-red-500' : 'text-white'}"
-		>
+		<p class="p-2 mr-auto text-3xl {textColor}">
 			{card.suit}<br />{card.num}
 		</p>
-		<p
-			class="absolute bottom-2 right-2 text-3xl
-							{isRed ? 'text-red-500' : 'text-white'}"
-		>
-			{card.suit}<br />{card.num}
-		</p>
-		<div class="absolute inset-x-0 inset-y-0 w-full h-full">
-			<span
-				class="w-full h-full {icon} {isRed ? 'text-red-500' : 'text-white'}"
-			/>
+		<div class="inset-x-0 inset-y-0 w-full h-full">
+			<span class="w-full h-full {icon} {textColor}" />
 		</div>
+		<p class="p-2 ml-auto text-3xl {textColor}">
+			{card.suit}<br />{card.num}
+		</p>
 	</div>
 
 	<!-- Card Back -->
@@ -62,12 +57,11 @@
 		class="absolute inset-x-0 inset-y-0 m-auto flex justify-center items-center
 						{backClass} transition-all duration-300"
 	>
-		<img
-			class="absolute inset-x-0 inset-y-0 w-full h-full rounded-lg"
-			src={tarot}
-			alt=""
-		/>
-		<p class="z-10 text-3xl text-center text-amber-200 text-bold select-none">
+		<img class="w-full h-full rounded-lg" src={tarot} alt="" />
+		<p
+			class="absolute inset-x-0 my-auto z-10
+			text-3xl text-center text-amber-200 text-bold select-none"
+		>
 			{name}
 		</p>
 	</div>

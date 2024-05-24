@@ -9,6 +9,9 @@
 
 	const BUTTON_CLASSES = "w-9 h-9 stroke-neutral-200 fill-neutral-200";
 	const BUTTON_STYLES = "color: white;";
+
+	let volume = $bgm.volume;
+	$: bgm.set({ ...$bgm, volume });
 </script>
 
 <!-- Menu icons -->
@@ -20,14 +23,14 @@
 		/>
 	</button>
 	<button on:click={() => ($bgm = !$bgm)}>
-		{#if $bgm}
+		{#if $bgm.paused}
 			<span
-				class="icon-[tabler--music] {BUTTON_CLASSES}"
+				class="icon-[tabler--music-off] {BUTTON_CLASSES}"
 				style={BUTTON_STYLES}
 			/>
 		{:else}
 			<span
-				class="icon-[tabler--music-off] {BUTTON_CLASSES}"
+				class="icon-[tabler--music] {BUTTON_CLASSES}"
 				style={BUTTON_STYLES}
 			/>
 		{/if}
@@ -46,6 +49,7 @@
 			style={BUTTON_STYLES}
 		/>
 	</button>
+
 	{#each [{ url: "/", name: "Home" }, { url: "/links", name: "Links" }] as button}
 		{@const active = button.url == $page.route.id}
 		<a
@@ -57,5 +61,19 @@
 			{button.name}
 		</a>
 	{/each}
+
+	<div class="my-auto"></div>
+	<div class="flex w-full items-center">
+		<span class="w-12 h-12 icon-[tabler--volume-2]"></span>
+		<input
+			class="w-full h-1 text-green-500"
+			type="range"
+			step="0.01"
+			min="0"
+			max="1"
+			bind:value={volume}
+		/>
+		<span class="w-12 h-12 icon-[tabler--volume]"></span>
+	</div>
 </nav>
 <Music></Music>

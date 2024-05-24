@@ -7,7 +7,10 @@
 	const menu = writable(false);
 	setContext("menu", menu);
 
-	const bgm = writable(false);
+	const bgm = writable({
+		paused: true,
+		volume: 0.5,
+	});
 	setContext("bgm", bgm);
 </script>
 
