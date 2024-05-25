@@ -3,18 +3,11 @@
 	import { getContext } from "svelte";
 
 	const menu = getContext("menu");
-
 	onMount(() => {
-		menu.set({
-			...menu,
-			icons: false,
-		});
+		$menu.icons = false;
 	});
 	onDestroy(() => {
-		menu.set({
-			...menu,
-			icons: true,
-		});
+		$menu.icons = false;
 	});
 </script>
 
