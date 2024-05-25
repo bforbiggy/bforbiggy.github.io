@@ -1,5 +1,5 @@
 <script>
-	import { onMount } from "svelte";
+	import { onMount, onDestroy, getContext } from "svelte";
 
 	let repos = null;
 	let user = null;
@@ -19,6 +19,14 @@
 		response = await fetch("https://api.github.com/users/bforbiggy");
 		data = await response.json();
 		user = data;
+	});
+
+	const menu = getContext("menu");
+	onMount(() => {
+		$menu.icons = true;
+	});
+	onDestroy(() => {
+		$menu.icons = false;
 	});
 </script>
 

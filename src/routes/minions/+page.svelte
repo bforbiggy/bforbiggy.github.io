@@ -1,16 +1,3 @@
-<script>
-	import { onMount, onDestroy } from "svelte";
-	import { getContext } from "svelte";
-
-	const menu = getContext("menu");
-	onMount(() => {
-		$menu.icons = false;
-	});
-	onDestroy(() => {
-		$menu.icons = false;
-	});
-</script>
-
 <div
 	class="w-screen h-screen bg-slate-950 flex justify-center items-center p-16"
 >

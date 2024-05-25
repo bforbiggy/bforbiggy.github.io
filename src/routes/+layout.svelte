@@ -5,7 +5,7 @@
 	import { writable } from "svelte/store";
 
 	const menu = writable({
-		icons: true,
+		icons: false,
 		sidebar: false,
 	});
 	setContext("menu", menu);

@@ -1,4 +1,5 @@
 <script>
+	import { onMount, onDestroy, getContext } from "svelte";
 	import { shuffle } from "lodash-es";
 	import CardLink from "./CardLink.svelte";
 
@@ -42,6 +43,14 @@
 			icon: "icon-[tabler--brand-discord]",
 		},
 	];
+
+	const menu = getContext("menu");
+	onMount(() => {
+		$menu.icons = true;
+	});
+	onDestroy(() => {
+		$menu.icons = false;
+	});
 </script>
 
 <svelte:head>
