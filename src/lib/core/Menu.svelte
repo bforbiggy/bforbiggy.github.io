@@ -42,7 +42,7 @@
 <!-- Actual Menu -->
 <nav
 	class="z-50 fixed bg-slate-900 bg-opacity-80 backdrop-blur-md h-screen w-screen max-w-[600px]
-	flex flex-col p-6 text-white text-2xl font-semibold
+	p-6 flex flex-col gap-2 text-white text-2xl font-semibold
 	{$menu.sidebar ? 'translate-x-0' : '-translate-x-full'} transition-transform"
 >
 	<button class="ml-auto w-12 h-auto" on:click={() => ($menu.sidebar = false)}>
@@ -55,9 +55,9 @@
 	{#each [{ url: "/", name: "Home" }, { url: "/links", name: "Links" }, { url: "/repositories", name: "Repositories" }] as button}
 		{@const active = button.url == $page.route.id}
 		<a
-			class="text-center rounded-md
-				{active && 'bg-gradient-to-r from-transparent via-pink-700 to-transparent'} 
-				p-2 mr-16"
+			class="text-center rounded-md p-2 mr-16
+				hover:scale-110 bg-gradient-to-r from-transparent to-transparent
+				{active && 'via-pink-700'} hover:via-pink-700/50 duration-100"
 			href="{base}	{button.url}"
 		>
 			{button.name}
