@@ -17,13 +17,13 @@
 {#if $menu.icons}
 	<!-- Menu icons -->
 	<div class="fixed z-50 top-2 left-2 h-4">
-		<button on:click={() => ($menu = true)}>
+		<button on:click={() => ($menu.sidebar = true)}>
 			<span
 				class="icon-[tabler--menu-2] {BUTTON_CLASSES}"
 				style={BUTTON_STYLES}
 			/>
 		</button>
-		<button on:click={() => ($bgm = !$bgm)}>
+		<button on:click={() => ($bgm.paused = !$bgm.paused)}>
 			{#if $bgm.paused}
 				<span
 					class="icon-[tabler--music-off] {BUTTON_CLASSES}"
