@@ -52,7 +52,7 @@
 		/>
 	</button>
 
-	{#each [{ url: "/", name: "Home" }, { url: "/links", name: "Links" }] as button}
+	{#each [{ url: "/", name: "Home" }, { url: "/links", name: "Links" }, { url: "/repositories", name: "Repositories" }] as button}
 		{@const active = button.url == $page.route.id}
 		<a
 			class="text-center rounded-md
